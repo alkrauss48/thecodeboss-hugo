@@ -1,0 +1,23 @@
+{
+  "name": "thecodeboss-hugo",
+  "version": "1.0.0",
+  "description": "My personal theme for thecodeboss-hugo",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx tailwindcss -i ./assets/main.css -o ./assets/style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alkrauss48/thecodeboss-hugo.git"
+  },
+  "author": "Aaron Krauss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alkrauss48/thecodeboss-hugo/issues"
+  },
+  "homepage": "https://github.com/alkrauss48/thecodeboss-hugo#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.1"
+  }
+}
