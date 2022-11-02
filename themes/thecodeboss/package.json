@@ -4,7 +4,8 @@
   "description": "My personal theme for thecodeboss-hugo",
   "main": "index.js",
   "scripts": {
-    "watch": "npx tailwindcss -i ./assets/main.css -o ./assets/style.css --watch",
+    "scss-watch": "npx tailwindcss -i ./assets/scss/main.scss -o ./assets/dist/style.css --watch",
+    "js-watch": "npx rollup ./assets/js/main.js --file ./assets/dist/bundle.js --format iife -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/alkrauss48/thecodeboss-hugo#readme",
   "devDependencies": {
+    "rollup": "^3.2.5",
     "tailwindcss": "^3.2.1"
   }
 }
