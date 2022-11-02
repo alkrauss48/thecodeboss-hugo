@@ -1,8 +1,9 @@
 ---
 title: "About"
 date: "2020–012–09"
-type: "about"
+type: "page"
 menu: "main"
+url: "/about"
 draft: "false"
 ---
-# Foo
+# About
