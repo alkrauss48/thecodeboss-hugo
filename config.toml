@@ -1,4 +1,5 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://thecodeboss.dev'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'thecodeboss'
+googleAnalytics = 'UA-38589428-1'

@@ -1,10 +1,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Hugo</title>
+    <title>{{.Title}}</title>
 
     <!-- resources.Get "style.css" will fetch the style.css file.
     It will not work if you mention the exact location like "./assets/style.css".-->
     {{ $style := resources.Get "dist/style.css" }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ template "_internal/google_analytics.html" . }}
 </head>

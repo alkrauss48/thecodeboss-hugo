@@ -1,8 +1,12 @@
 {{ define "main" }}
+  <header>
+    <section>
+      <div data-title="header-image"></div>
+      <div data-title="header-image-overlay"></div>
+    </section>
+    <h1>{{.Title}}</h1>
+  </header>
   <main>
-    Page Single Layout
-    <div>
-      {{.Content}}
-    </div>
+    {{.Content}}
   </main>
 {{ end }}
