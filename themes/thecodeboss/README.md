@@ -28,7 +28,7 @@ npm run scss-watch
 ### Build the JS
 ```
 cd themes/thecodeboss
-npm run scss-watch
+npm run js-watch
 ```
 
 ### Start the application server

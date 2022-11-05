@@ -1,0 +1,18 @@
+<header>
+  <section class="h-96">
+    {{ $image := .Resources.GetMatch "header.jpg" }}
+    <img
+      data-title="header-image"
+      class="[ h-96 w-full ][ object-cover ][ fixed -z-10 ]"
+      src="{{ $image.RelPermalink }}"
+      />
+  </section>
+  <section class="[ bg-orange/80 ][ pt-12 pb-4 -mt-8 ]">
+    <div class="container-main">
+      <h1
+        data-title="page-title"
+        class="uppercase text-white text-3xl font-bold"
+        >{{.Title}}</h1>
+    </div>
+  </section>
+</header>

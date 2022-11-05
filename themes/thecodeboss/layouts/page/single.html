@@ -1,12 +1,8 @@
 {{ define "main" }}
-  <header>
-    <section>
-      <div data-title="header-image"></div>
-      <div data-title="header-image-overlay"></div>
-    </section>
-    <h1>{{.Title}}</h1>
-  </header>
-  <main>
+{{ partial "page-header.html" . }}
+<main class="bg-white">
+  <div class="container-main">
     {{.Content}}
-  </main>
+  </div>
+</main>
 {{ end }}

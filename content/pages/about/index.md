@@ -3,10 +3,9 @@ title: About
 date: "2022–11–03"
 type: page
 menu: main
+headerAltText: "A view from a nice German village. I grew up in Germany!"
 url: /about
-images:
-- about-header.jpeg
-description: I’m Aaron Krauss, and I’m a full stack developer based out of OKC, Oklahoma!
+description: I'm Aaron Krauss, and I'm a full stack developer based out of OKC, Oklahoma!
 draft: "false"
 ---
 I’m Aaron Krauss, and I’m a full stack developer based out of OKC, Oklahoma. I
