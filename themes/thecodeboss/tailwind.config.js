@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: ["content/**/*.md", "layouts/**/*.html"],
   theme: {
@@ -12,7 +14,12 @@ module.exports = {
           DEFAULT: '#333',
         },
       },
+      fontFamily: {
+        'sans': ['"Open Sans"', ...defaultTheme.fontFamily.sans],
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
