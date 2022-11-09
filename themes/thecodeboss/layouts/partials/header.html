@@ -1,0 +1,30 @@
+<header>
+  <nav>
+    <ul>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+              <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                  <a href="{{ .URL }}">
+                      {{ .Pre }}
+                      <span>{{ .Name }}</span>
+                  </a>
+              </li>
+              {{ if .HasChildren }}
+              <ul class="sub-menu">
+                  {{ range .Children }}
+                      <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                          <a href="{{ .URL }}">{{ .Name }}</a>
+                      </li>
+                  {{ end }}
+              </ul>
+            {{ end }}
+        {{ end }}
+        <li>
+            <a href="https://thecodeboss.dev/resume" target="_blank">Resume</a>
+        </li>
+        <li>
+            <a href="http://labs.thecodeboss.dev/" target="_blank">Labs</a>
+        </li>
+    </ul>
+  </nav>
+</header>
