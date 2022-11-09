@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main class="bg-white pt-12">
+  <div class="container-main">
+    <h1
+      class="text-orange my-6 text-3xl font-bold"
+      >{{.Title}}</h1>
+    <p class="text-sm font-light">
+      <time>{{ .Date | time.Format ":date_long" }}</time>
+    </p>
+    <hr class="border-t-4 border-blue w-24 mt-4 mb-6">
+    <div class="prose prose-main max-w-none">
+    {{.Content}}
+    </div>
+  </div>
+</main>
+{{ end }}

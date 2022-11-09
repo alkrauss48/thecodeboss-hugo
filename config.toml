@@ -3,3 +3,12 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'thecodeboss'
 googleAnalytics = 'UA-38589428-1'
+
+[permalinks]
+blog = '/:year/:month/:title/'
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[params]
+dateFormat = "02 Jan 2006"

@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<main class="bg-white pt-12">
+  <div class="container-main">
+    <div class="prose prose-main max-w-none">
+      {{.Content}}
+    </div>
+    {{ $paginator := .Paginate (where .Pages "Type" "blog") }}
+    {{ template "_internal/pagination.html" . }}
+    {{ range $paginator.Pages }}
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+  </div>
+</main>
+{{ end }}
