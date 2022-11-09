@@ -15,10 +15,14 @@
       <ul class="flex">
           {{ $currentPage := . }}
           {{ range .Site.Menus.main }}
-                <li class="ml-6 {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                <li class="ml-6">
                     <a
                       href="{{ .URL }}"
-                      class="text-white font-bold focus:text-teal hover:text-teal {{ if $currentPage.IsMenuCurrent "main" . }}text-teal{{ end }}"
+                      class="text-white font-bold focus:text-teal hover:text-teal
+                      {{ if or
+                        ($currentPage.IsMenuCurrent "main" .)
+                        ($currentPage.HasMenuCurrent "main" .)
+                      }}text-teal{{ end }}"
                       >
                         {{ .Pre }}
                         <span>{{ .Name }}</span>
