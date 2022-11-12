@@ -11,7 +11,7 @@
     @apply
       prose-h2:text-blue
       prose-a:no-underline
-      prose-a:text-teal hover:prose-a:text-blue
+      prose-a:text-teal hover:prose-a:text-blue focus:prose-a:text-blue
       prose-a:font-bold
       prose-p:leading-loose
     ;

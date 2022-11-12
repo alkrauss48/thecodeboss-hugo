@@ -4,6 +4,9 @@ module.exports = {
   content: ["content/**/*.md", "layouts/**/*.html"],
   theme: {
     extend: {
+      borderWidth: {
+        '20': '20px',
+      },
       colors: {
         blue: '#1470e7',
         orange: '#ff5f00',
