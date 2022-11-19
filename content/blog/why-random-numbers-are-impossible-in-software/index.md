@@ -1,8 +1,9 @@
 ---
 title: Why Random Numbers are Impossible in Software
 date: "2017-05-25"
-description: Here are my blog posts! Lately I’ve been more of an active speaker than an active writer, so feel free to also check out some of my talks.
+description: Ever wonder how random numbers work in software?
 draft: "false"
+summary: Ever wonder how random numbers work in software?
 ---
 The title of this post might seem preposterous to you – I mean, many
 programming languages have the capability to generate random numbers, right?

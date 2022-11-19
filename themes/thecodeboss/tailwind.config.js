@@ -11,7 +11,10 @@ module.exports = {
         '20': '20px',
       },
       colors: {
-        blue: '#1470e7',
+        blue: {
+          DEFAULT: '#1470e7',
+          700: '#1265d0',
+        },
         orange: '#ff5f00',
         teal: '#00e7ad',
         dark: {
