@@ -1,4 +1,5 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import { threeMinifier } from '@yushijinhun/three-minifier-rollup';
 // import typescript from '@rollup/plugin-typescript';
 
 const output = {
@@ -7,6 +8,7 @@ const output = {
 };
 
 const plugins = [
+  threeMinifier(), // Seems to shave off 20KB or so
   nodeResolve(),
   // typescript(),
 ];
