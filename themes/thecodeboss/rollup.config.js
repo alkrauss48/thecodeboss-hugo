@@ -1,5 +1,6 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { threeMinifier } from '@yushijinhun/three-minifier-rollup';
+import terser from '@rollup/plugin-terser';
 // import typescript from '@rollup/plugin-typescript';
 
 const output = {
@@ -12,6 +13,10 @@ const plugins = [
   nodeResolve(),
   // typescript(),
 ];
+
+if (process.env.NODE_ENV === 'production') {
+  plugins.push(terser());
+}
 
 export default [{
   input: 'assets/js/main.ts',
