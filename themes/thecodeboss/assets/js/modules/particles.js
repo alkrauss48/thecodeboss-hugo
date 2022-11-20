@@ -41,26 +41,27 @@ export const init = () => {
 
     materials[i] = new THREE.PointsMaterial({ size });
 
-    const particles = new THREE.Points( geometry, materials[i] );
+    const particles = new THREE.Points(geometry, materials[i]);
 
     particles.rotation.x = Math.random() * 6;
     particles.rotation.y = Math.random() * 6;
     particles.rotation.z = Math.random() * 6;
 
-    scene.add( particles );
+    scene.add(particles);
   }
 
-  renderer.setPixelRatio( window.devicePixelRatio );
-  renderer.setSize( window.innerWidth, window.innerHeight );
-  container.appendChild( renderer.domElement );
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  container.appendChild(renderer.domElement);
 
-  document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-  window.addEventListener( 'resize', onWindowResize, false );
+  document.addEventListener('mousemove', onDocumentMouseMove, false);
+  window.addEventListener('resize', onWindowResize, false);
 };
 
 export const animate = () => {
-  requestAnimationFrame( animate );
   render();
+
+  requestAnimationFrame(animate);
 };
 
 const onWindowResize = () => {
@@ -87,21 +88,21 @@ const render = () => {
   camera.lookAt( scene.position );
 
   for (let i = 0; i < scene.children.length; i ++) {
-    const object = scene.children[ i ];
+    const object = scene.children[i];
 
     if ( object instanceof THREE.Points ) {
-      object.rotation.y = time * ( i < 4 ? i + 1 : - ( i + 1 ) );
+      object.rotation.y = time * (i < 4 ? i + 1 : - (i + 1));
     }
   }
 
   for (let i = 0; i < materials.length; i ++) {
     const { color } = PARAMETERS[i];
 
-    const h = ( 360 * ( color[0] + time ) % 360 ) / 360;
-    materials[i].color.setHSL( h, color[1], color[2] );
+    const h = (360 * (color[0] + time) % 360) / 360;
+    materials[i].color.setHSL(h, color[1], color[2]);
   }
 
-  renderer.render( scene, camera );
+  renderer.render(scene, camera);
 };
 
 export default {
