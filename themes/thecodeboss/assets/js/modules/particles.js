@@ -1,11 +1,11 @@
 import * as THREE from 'three';
 
 const PARAMETERS = [
-  [ [1, 1, 0.5], 5 ],
-  [ [0.95, 1, 0.5], 4 ],
-  [ [0.90, 1, 0.5], 3 ],
-  [ [0.85, 1, 0.5], 2 ],
-  [ [0.80, 1, 0.5], 1 ]
+  { color: [1, 1, 0.5], size: 5 },
+  { color: [0.95, 1, 0.5], size: 4 },
+  { color: [0.90, 1, 0.5], size: 3 },
+  { color: [0.85, 1, 0.5], size: 2 },
+  { color: [0.80, 1, 0.5], size: 1 }
 ];
 
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 3000 );
@@ -37,8 +37,7 @@ export const init = () => {
   geometry.setFromPoints(points);
 
   for (let i = 0; i < PARAMETERS.length; i++) {
-    const color = PARAMETERS[i][0];
-    const size = PARAMETERS[i][1];
+    const { color, size } = PARAMETERS[i];
 
     materials[i] = new THREE.PointsMaterial({ size });
 
@@ -96,7 +95,7 @@ const render = () => {
   }
 
   for (let i = 0; i < materials.length; i ++) {
-    const color = PARAMETERS[i][0];
+    const { color } = PARAMETERS[i];
 
     const h = ( 360 * ( color[0] + time ) % 360 ) / 360;
     materials[i].color.setHSL( h, color[1], color[2] );
