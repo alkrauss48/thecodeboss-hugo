@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/alkrauss48/thecodeboss-hugo#readme",
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^9.0.2",
     "@tailwindcss/typography": "^0.5.7",
     "@types/three": "^0.146.0",
