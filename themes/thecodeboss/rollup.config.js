@@ -1,3 +1,4 @@
+import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { threeMinifier } from '@yushijinhun/three-minifier-rollup';
 import terser from '@rollup/plugin-terser';
@@ -9,6 +10,7 @@ const output = {
 };
 
 const plugins = [
+  commonjs(),
   threeMinifier(), // Seems to shave off 20KB or so
   nodeResolve(),
   // typescript(),

@@ -1,11 +1,31 @@
 {{ define "main" }}
   <main>
-    <section id="particles" class="
+    <section id="particles" data-title="3D Background" class="
       [ bg-black w-full h-full ]
       [ fixed left-0 top-0 -z-10 ]
       "
-      data-title="3D Background"
     ></section>
+    <header data-title="Main Heading" class="
+      [ flex items-center justify-center ]
+      [ w-full h-screen ]
+    ">
+      <section data-title="Main Heading" class="
+        [ text-white text-3xl text-center ]
+      ">
+        <p>Hi, I'm</p>
+        <h1>Aaron Krauss</h1>
+        <h2>
+          I'm a
+          <span id="typed-strings">
+            <span>Tea Enthusiast</span>
+            <span>Longboarder</span>
+            <span>Dad</span>
+            <span>Developer</span>
+          </span>
+          <span id="typed"></span>
+        </h2>
+      </section>
+    </header>
   </main>
 
   {{ $homeJs := resources.Get "dist/home.js" }}
