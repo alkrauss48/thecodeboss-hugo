@@ -10,11 +10,15 @@
       [ w-full h-screen ]
     ">
       <section data-title="Main Heading" class="
+        [ bg-black/60 w-full max-w-xl mx-auto py-8 ]
         [ text-white text-3xl text-center ]
       ">
-        <p>Hi, I'm</p>
-        <h1>Aaron Krauss</h1>
-        <h2>
+        <p class="[ text-5xl font-bold text-shadow ]">Hi, I'm</p>
+        <h1 class="
+          [ text-6xl text-teal font-bold text-shadow ]
+          [ mt-8 mb-16 ]
+        ">Aaron Krauss</h1>
+        <h2 class="[ text-4xl font-bold text-shadow mb-16 ]">
           I'm a
           <span id="typed-strings">
             <span>Tea Enthusiast</span>
@@ -22,8 +26,24 @@
             <span>Dad</span>
             <span>Developer</span>
           </span>
-          <span id="typed"></span>
+          <span id="typed" class="text-orange"></span>
         </h2>
+        <nav>
+          <ul class="flex justify-center">
+              {{ range .Site.Menus.social }}
+              <li class="mx-8">
+                <a
+                  class="[ w-8 block ][ text-white hover:text-teal focus:text-teal ]"
+                  target="_blank"
+                  title="{{ .Name }}"
+                  href="{{ .URL }}"
+                  >
+                  {{ partial (printf "icons/%s.html" .Identifier) (dict "class" "") }}
+                </a>
+              </li>
+              {{ end }}
+          </ul>
+        </nav>
       </section>
     </header>
   </main>
