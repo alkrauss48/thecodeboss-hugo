@@ -12,6 +12,7 @@ unsafe= true
 
 [params]
 dateFormat = "02 Jan 2006"
+logo = '/images/logo.png'
 
 [menu]
 [[menu.social]]
