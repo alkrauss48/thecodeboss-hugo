@@ -12,11 +12,18 @@ module.exports = {
       },
       colors: {
         blue: {
+          200: '#e9f1fd',
           DEFAULT: '#1470e7',
           700: '#1265d0',
         },
-        orange: '#ff5f00',
-        teal: '#00e7ad',
+        orange: {
+          200: '#ffe5d6',
+          DEFAULT: '#ff5f00',
+        },
+        teal: {
+          200: '#e7fff9',
+          DEFAULT: '#00e7ad',
+        },
         dark: {
           400: '#595959',
           500: '#4d4d4d',

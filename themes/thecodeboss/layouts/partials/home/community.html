@@ -1,0 +1,40 @@
+<section class="bg-white py-16 text-center">
+  <h2 class="uppercase font-bold text-2xl">I love being involved in my tech community</h2>
+  <h3 class="font-light text-lg mt-12 mb-16">Here are some of the groups that I help manage and volunteer with:</h3>
+
+  <div class="container-main flex">
+    {{ partial "home/community-figure.html" (dict
+      "color" "teal"
+      "imageAlt" "OKC WebDevs Logo"
+      "imageSrc" "/images/community/okc-webdevs.png"
+      "url" "https://www.meetup.com/OKCWebDevs/"
+      "urlLabel" "OKC WebDevs"
+      "padding" true
+    ) }}
+
+    {{ partial "home/community-figure.html" (dict
+      "color" "blue"
+      "imageAlt" "Techlahoma Logo"
+      "imageSrc" "/images/community/techlahoma.png"
+      "url" "https://www.techlahoma.org/"
+      "urlLabel" "Techlahoma"
+      "padding" true
+    ) }}
+
+    {{ partial "home/community-figure.html" (dict
+      "color" "orange"
+      "imageAlt" "Code.org Logo"
+      "imageSrc" "/images/community/code-org.svg"
+      "url" "https://www.meetup.com/OKCWebDevs/"
+      "urlLabel" "Code.org"
+      "padding" false
+    ) }}
+  </div>
+
+  <!-- Tailwind Partial Safelist -->
+  <div class="hidden
+    [ bg-teal bg-teal-200 hover:text-teal focus:text-teal border-teal ]
+    [ bg-blue bg-blue-200 hover:text-blue focus:text-blue border-blue ]
+    [ bg-orange bg-orange-200 hover:text-orange focus:text-orange border-orange ]
+  "></div>
+</section>

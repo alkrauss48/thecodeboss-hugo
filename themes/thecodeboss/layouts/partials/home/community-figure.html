@@ -1,0 +1,22 @@
+<figure class="w-full {{ cond (.padding) "pr-8" "" }}">
+  <div class="
+    [ h-48 p-6 flex w-full justify-around items-center ]
+    [ bg-{{ .color }}-200 ]
+  ">
+    <img
+      class="[ w-auto h-auto max-h-full lg:max-w-[80%] ]"
+      src="{{ .imageSrc }}"
+      alt="{{ .imageAlt }}"
+    >
+  </div>
+  <figcaption class="mt-4">
+    <a class="
+      [ block w-full p-3 ]
+      [ border-2 border-{{ .color }} ]
+      [ hover:bg-white focus:bg-white hover:text-{{ .color }} focus:text-{{ .color }} ]
+      [ text-white bg-{{ .color }} text-center font-bold ]
+      "
+      href="{{ .url }}"
+    >{{ .urlLabel }}</a>
+  </figcaption>
+</figure>
