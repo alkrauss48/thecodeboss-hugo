@@ -4,6 +4,7 @@ module.exports = {
   content: ["content/**/*.md", "layouts/**/*.html"],
   safelist: [
     'border-t-white',
+    'border-t-dark',
   ],
   theme: {
     extend: {

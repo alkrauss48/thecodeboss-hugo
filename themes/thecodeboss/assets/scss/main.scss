@@ -16,6 +16,18 @@
       prose-p:leading-loose
     ;
   }
+
+  .prose-home {
+    @apply
+      prose-h2:text-teal
+      prose-a:no-underline hover:prose-a:underline focus:prose-a:underline
+      prose-a:text-orange hover:prose-a:text-white focus:prose-a:text-white
+      prose-a:font-bold
+      prose-p:leading-loose
+      prose-p:text-white
+      prose-p:font-light
+    ;
+  }
 }
 
 @layer utilities {
