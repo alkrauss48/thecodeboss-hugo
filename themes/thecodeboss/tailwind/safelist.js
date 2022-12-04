@@ -13,8 +13,8 @@ module.exports = [
 
     // ../layouts/partials/home/community.html
     `bg-${color}-200`,
-    `hover:text-${color}`,
-    `focus:text-${color}`,
+    `group-hover:text-${color}`,
+    `group-focus:text-${color}`,
     `border-${color}`,
 
     // ../layouts/partials/home/portfolio.html

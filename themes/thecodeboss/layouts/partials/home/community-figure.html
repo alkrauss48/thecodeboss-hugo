@@ -1,23 +1,31 @@
-<figure class="w-full">
-  <div class="
-    [ h-48 p-6 flex w-full justify-around items-center ]
-    [ bg-{{ .color }}-200 ]
-  ">
-    <img
-      class="[ w-auto h-auto max-h-full max-w-[70%] md:max-w-full lg:max-w-[80%] ]"
-      src="{{ .imageSrc }}"
-      alt="{{ .imageAlt }}"
-    >
-  </div>
-  <figcaption class="mt-4">
-    <a class="
-      [ block w-full p-3 ]
-      [ border-2 border-{{ .color }} ]
-      [ hover:bg-white focus:bg-white hover:text-{{ .color }} focus:text-{{ .color }} ]
-      [ text-white bg-{{ .color }} text-center font-bold ]
-      "
-      href="{{ .url }}"
-      target="_blank"
-    >{{ .urlLabel }}</a>
-  </figcaption>
-</figure>
+<a
+  class="group block w-full"
+  href="{{ .url }}"
+  target="_blank"
+>
+  <figure>
+    <div class="
+      [ h-48 p-6 flex w-full justify-around items-center ]
+      [ bg-{{ .color }}-200 ]
+    ">
+      <img
+        class="
+          [ w-auto h-auto max-h-full max-w-[70%] md:max-w-full lg:max-w-[80%] ]
+          [ transition-transform translate-y-0 group-hover:-translate-y-2 group-focus:-translate-y-2 ]
+        "
+        src="{{ .imageSrc }}"
+        alt="{{ .imageAlt }}"
+      >
+    </div>
+    <figcaption class="mt-4">
+      <p class="
+        [ p-3 ]
+        [ border-2 border-{{ .color }} ]
+        [ group-hover:bg-white group-focus:bg-white ]
+        [ group-hover:text-{{ .color }} group-focus:text-{{ .color }} ]
+        [ text-white bg-{{ .color }} text-center font-bold ]
+        "
+      >{{ .urlLabel }}</p>
+    </figcaption>
+  </figure>
+</a>
