@@ -14,15 +14,18 @@ module.exports = {
       colors: {
         blue: {
           200: '#e9f1fd',
+          500: '#4790ef',
           DEFAULT: '#1470e7',
           700: '#1265d0',
         },
         orange: {
           200: '#ffe5d6',
+          500: '#ff843b',
           DEFAULT: '#ff5f00',
         },
         teal: {
           200: '#e7fff9',
+          500: '#23ffc8',
           DEFAULT: '#00e7ad',
         },
         dark: {
