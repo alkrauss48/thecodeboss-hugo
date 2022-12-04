@@ -1,6 +1,8 @@
 const OPEN = 'Open';
 const CLOSE = 'Close';
 
+const KEY_ESCAPE = 'Escape';
+
 const state = {
   isOpen: false,
 };
@@ -70,6 +72,14 @@ export const handleTabIndex = (shouldBeFocusable) => {
 export const init = () => {
   const navButton = document.getElementById("responsiveNavToggle");
   navButton.addEventListener("click", toggleMainMenu);
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== KEY_ESCAPE) {
+      return;
+    }
+
+    stateProxy.isOpen = false;
+  });
 }
 
 export default {
