@@ -1,0 +1,56 @@
+<a
+  class="
+    [ mb-12 ]
+    [ group relative block w-full ]
+    [ shadow-featured shadow-dark]
+  "
+  href="{{ .url }}"
+  target="_blank"
+>
+  <figure>
+    <img
+      class="
+      [ relative ]
+      [ w-full h-40 z-10 ]
+      [ object-cover ]
+      "
+      src="{{ .imageSrc }}"
+      alt="{{ .imageAlt }}"
+    >
+    <div class="
+      [ hidden group-hover:flex  justify-center items-center ]
+      [ absolute top-0 left-0 z-20 ]
+      [ w-full h-full ]
+      [ bg-blue/[.85] ]
+    ">
+      <p class="font-bold text-white text-shadow">
+        Visit Site
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 1 20 20"
+          fill="currentColor"
+          class="[ w-5 h-5 ][ inline ml-1 ]"
+          >
+          <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
+          <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
+        </svg>
+      </p>
+    </div>
+    <figcaption class="
+      [ absolute -bottom-0 left-[10%] ]
+      [ w-4/5 ]
+      [ py-1 mt-4 ]
+      [ bg-dark text-white ]
+      [ transition-all group-hover:-bottom-14 group-focus:-bottom-14 ]
+    ">
+      {{ .urlLabel }}
+      <div
+        data-title="Down Triangle"
+        class="
+          [ absolute bottom-full left-1/2 w-0 h-0 ]
+          [ border-x-transparent border-x-10 ]
+          [ border-b-dark border-b-10 -ml-[10px] ]
+        "></div>
+    </figcaption>
+  </figure>
+</a>

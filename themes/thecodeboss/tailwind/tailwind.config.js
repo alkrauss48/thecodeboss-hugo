@@ -10,6 +10,10 @@ module.exports = {
     extend: {
       borderWidth: {
         '20': '20px',
+        '10': '10px',
+      },
+      boxShadow: {
+        'featured': '4px 4px 10px black',
       },
       colors: {
         blue: {
