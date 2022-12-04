@@ -1,9 +1,9 @@
 <header>
-  <section class="h-96">
+  <section class="h-56 md:h-96">
     {{ $image := .Resources.GetMatch "header.jpg" }}
     <img
       data-title="header-image"
-      class="[ h-96 w-full ][ object-cover ][ fixed -z-10 ]"
+      class="[ h-56 md:h-96 w-full ][ object-cover ][ fixed -z-10 ]"
       alt="{{ .Params.headerAltText }}"
       src="{{ $image.RelPermalink }}"
       />
