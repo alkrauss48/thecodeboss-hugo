@@ -1,6 +1,7 @@
-<header class="
+<header id="headerBar" class="
   [ fixed w-full z-40 ]
   [ bg-dark py-2 border-b-2 border-teal ]
+  [ transition-all left-0 ]
 ">
   <div class="container-main flex justify-between items-center">
     <section>
@@ -15,5 +16,7 @@
       </a>
     </section>
     {{ partial "nav/responsive-nav-toggle.html" . }}
+
+    {{ partial "nav/nav-list.html" . }}
   </div>
 </header>

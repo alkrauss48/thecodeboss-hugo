@@ -7,6 +7,7 @@ const state = {
 
 const stateHandler = {
   set(obj, prop, value) {
+    const headerBar = document.getElementById("headerBar");
     const label = document.getElementById("responsiveNavToggleText");
     const line1 = document.getElementById("responsiveNavToggleLine1");
     const line2 = document.getElementById("responsiveNavToggleLine2");
@@ -38,6 +39,12 @@ const stateHandler = {
       'translate-y-0',
       '-rotate-45',
     ].map(className => line3.classList.toggle(className));
+
+    // Toggle header bar left position
+    [
+      'left-0',
+      '-left-1/2',
+    ].map(className => headerBar.classList.toggle(className));
 
     return true;
   },

@@ -5,6 +5,14 @@ module.exports = [
   'border-t-white',
   'border-t-dark',
 
+  // ../assets/js/modules/responsive-menu.js
+  '-left-1/2', // headerBar
+  'translate-y-0', // responsiveNavToggleLine1, responsiveNavToggleLine3
+  'rotate-45', // responsiveNavToggleLine1
+  'opacity-0', // responsiveNavToggleLine2
+  'translate-x-3', // responsiveNavToggleLine2
+  '-rotate-45', //  responsiveNavToggleLine3
+
   ...COLORS.map((color) => [
 
     // ../layouts/partials/home/community.html

@@ -1,5 +1,8 @@
-<nav>
-  <ul class="flex">
+<nav class="
+  [ absolute md:static ]
+  [ left-full top-0 ]
+">
+  <ul class="flex flex-col md:flex-row">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
     <li class="ml-6">
