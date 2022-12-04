@@ -1,5 +1,5 @@
 <a class="
-  [ group inline-block w-full h-60 p-4 ]
+  [ relative group inline-block w-full h-40 md:h-60 p-4 ]
   [ bg-blue text-white hover:bg-blue-700 text-center ]
   [ flex flex-col justify-center ]
   "
@@ -8,15 +8,16 @@
     <h2 class="
       [ text-lg ]
       [ transition ease-in-out duration-300 ]
-      [ group-hover:-translate-y-8 group-focus:-translate-y-8 ]
+      [ md:group-hover:-translate-y-8 md:group-focus:-translate-y-8 ]
       ">
         {{ .Title }}
     </h2>
     <p class="
+      [ absolute bottom-10 ]
       [ text-sm font-light ]
       [ transition ease-in-out duration-300 ]
-      [ group-hover:-translate-y-4 group-focus:-translate-y-4 ]
-      [ opacity-0 group-hover:opacity-100 group-focus:opacity-100 ]
+      [ md:group-hover:-translate-y-4 md:group-focus:-translate-y-4 ]
+      [ opacity-0 md:group-hover:opacity-100 md:group-focus:opacity-100 ]
     ">
       {{ .Summary }}
     </p>
