@@ -49,7 +49,8 @@ const stateHandler = {
     ].map(className => headerBar.classList.toggle(className));
 
     // Toggle tabindex of nav link elements
-    handleTabIndex(value);
+    handleTabIndex();
+    handleAriaAttributes();
 
     return true;
   },
@@ -61,12 +62,18 @@ const toggleMainMenu = (event) => {
   stateProxy.isOpen = !stateProxy.isOpen;
 };
 
-export const handleTabIndex = (shouldBeFocusable) => {
+export const handleTabIndex = () => {
   document
     .querySelectorAll('[data-handle="nav-link"]')
     .forEach((element) => {
-      element.tabIndex = shouldBeFocusable ? 0 : -1;
+      element.tabIndex = stateProxy.isOpen ? 0 : -1;
     });
+};
+
+export const handleAriaAttributes = () => {
+  const navToggle = document.getElementById("responsiveNavToggle");
+
+  navToggle.setAttribute("aria-expanded", stateProxy.isOpen);
 };
 
 export const init = () => {
@@ -84,5 +91,6 @@ export const init = () => {
 
 export default {
   handleTabIndex,
+  handleAriaAttributes,
   init,
 }
