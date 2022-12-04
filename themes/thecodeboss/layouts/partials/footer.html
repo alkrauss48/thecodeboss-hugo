@@ -25,3 +25,6 @@
   </div>
   {{ partial "arrow-down.html" (dict "color" "white") }}
 </footer>
+
+{{ $mainJs := resources.Get "dist/main.js" }}
+<script type="text/javascript" src="{{ $mainJs.Permalink }}"></script>
