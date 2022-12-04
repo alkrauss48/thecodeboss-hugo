@@ -14,27 +14,6 @@
         />
       </a>
     </section>
-    <nav>
-      <ul class="flex">
-          {{ $currentPage := . }}
-          {{ range .Site.Menus.main }}
-                <li class="ml-6">
-                    <a
-                      href="{{ .URL }}"
-                      class="text-white font-bold focus:text-teal hover:text-teal
-                      {{ if or
-                        ($currentPage.IsMenuCurrent "main" .)
-                        ($currentPage.HasMenuCurrent "main" .)
-                      }}text-teal{{ end }}"
-                      >
-                        {{ .Pre }}
-                        <span>{{ .Name }}</span>
-                    </a>
-                </li>
-          {{ end }}
-          {{ partial "nav/external-link.html" (dict "label" "Resume" "url" "https://thecodeboss.dev/resume") }}
-          {{ partial "nav/external-link.html" (dict "label" "Labs" "url" "https://labs.thecodeboss.dev") }}
-      </ul>
-    </nav>
+    {{ partial "nav/nav-list.html" . }}
   </div>
 </header>
