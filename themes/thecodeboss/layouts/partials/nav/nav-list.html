@@ -4,13 +4,14 @@
   [ bg-dark md:bg-transparent]
   [ w-1/2 md:w-auto ]
   [ h-screen md:h-auto ]
+  [ border-l-2 border-black md:border-none ]
 ">
   <ul class="flex flex-col md:flex-row">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
     <li class="
       [ ml-0 md:ml-6 ]
-      [ border-l-2 border-b-2 border-black md:border-none ]
+      [ border-b-2 border-black md:border-none ]
     ">
       <a
         data-handle="nav-link"
