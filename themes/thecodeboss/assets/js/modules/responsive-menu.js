@@ -46,6 +46,9 @@ const stateHandler = {
       '-left-1/2',
     ].map(className => headerBar.classList.toggle(className));
 
+    // Toggle tabindex of nav link elements
+    handleTabIndex(value);
+
     return true;
   },
 };
@@ -56,11 +59,20 @@ const toggleMainMenu = (event) => {
   stateProxy.isOpen = !stateProxy.isOpen;
 };
 
+export const handleTabIndex = (shouldBeFocusable) => {
+  document
+    .querySelectorAll('[data-handle="nav-link"]')
+    .forEach((element) => {
+      element.tabIndex = shouldBeFocusable ? 0 : -1;
+    });
+};
+
 export const init = () => {
   const navButton = document.getElementById("responsiveNavToggle");
   navButton.addEventListener("click", toggleMainMenu);
 }
 
 export default {
+  handleTabIndex,
   init,
 }
