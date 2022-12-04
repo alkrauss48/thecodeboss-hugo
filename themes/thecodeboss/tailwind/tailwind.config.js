@@ -1,11 +1,11 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
+const safelist = require('./safelist.js');
+
+console.log(safelist);
 
 module.exports = {
   content: ["content/**/*.md", "layouts/**/*.html"],
-  safelist: [
-    'border-t-white',
-    'border-t-dark',
-  ],
+  safelist,
   theme: {
     extend: {
       borderWidth: {
