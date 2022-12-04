@@ -2,8 +2,31 @@
   {{ partial "arrow-down.html" (dict "color" "white") }}
   <div class="container-main flex justify-center items-center">
     <img class="w-56" src="{{ .Site.Params.Profile }}" alt="">
-    <div class="prose prose-home ml-8">
-      {{.Content}}
+    <div class="ml-8">
+      <div class="prose prose-home">
+        {{.Content}}
+      </div>
+      <div class="mt-4">
+        <a class="
+          [ inline-block px-5 py-2 ]
+          [ font-bold ]
+          [ border-2 border-orange ]
+          [ bg-orange text-white ]
+          [ hover:bg-white hover:text-orange ]
+          "
+          href="/about"
+        >More About Me</a>
+        <a class="
+          [ inline-block px-5 py-2 ml-4 ]
+          [ font-bold ]
+          [ border-2 border-dark-400 ]
+          [ bg-dark-500 text-white ]
+          [ hover:bg-white hover:text-dark-500 ]
+          "
+          target="_blank"
+          href="/resume"
+        >Resume</a>
+      </div>
     </div>
   </div>
 </section>
