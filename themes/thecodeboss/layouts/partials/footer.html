@@ -1,9 +1,12 @@
 <footer class="relative bg-dark py-3">
-  <div class="container-main flex justify-between items-center">
-    <section>
+  <div class="
+    [ container-main ]
+    [ flex flex-col md:flex-row justify-between items-center ]
+  ">
+    <section class="my-4 md:my-0">
       <p class="text-white">&copy; 2022 Aaron Krauss. All Rights Reserved.</p>
     </section>
-    <nav>
+    <nav class="mb-4 md:mb-0">
       <ul class="flex items-end">
           {{ range .Site.Menus.social }}
           <li class="ml-8">

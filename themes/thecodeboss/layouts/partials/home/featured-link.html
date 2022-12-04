@@ -2,7 +2,7 @@
   class="
     [ mb-12 ]
     [ group relative block w-full ]
-    [ shadow-featured shadow-dark]
+    [ shadow-featured shadow-dark-400 ]
   "
   href="{{ .url }}"
   target="_blank"
@@ -18,7 +18,7 @@
       alt="{{ .imageAlt }}"
     >
     <div class="
-      [ hidden group-hover:flex  justify-center items-center ]
+      [ hidden md:group-hover:flex md:group-focus:flex justify-center items-center ]
       [ absolute top-0 left-0 z-20 ]
       [ w-full h-full ]
       [ bg-blue/[.85] ]
@@ -37,7 +37,7 @@
       </p>
     </div>
     <figcaption class="
-      [ absolute -bottom-0 left-[10%] ]
+      [ absolute -bottom-14 md:-bottom-0 left-[10%] ]
       [ w-4/5 ]
       [ py-1 mt-4 ]
       [ bg-dark text-white ]

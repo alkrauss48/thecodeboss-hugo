@@ -1,10 +1,28 @@
 <section class="bg-white py-16 text-center">
-  <h2 class="uppercase font-bold text-2xl">Along with a few of my featured
-    projects</h2>
+  <h2 class="uppercase font-bold text-2xl">Along with a bit of my featured
+    work</h2>
   <div class="
     [ container-main mt-12 ]
-    [ grid gap-1 grid-cols-2 md:grid-cols-4 auto-rows-max ]
+    [ grid gap-8 grid-cols-2 md:grid-cols-4 auto-rows-max ]
   ">
+    {{ partial "home/featured-link.html" (dict
+      "imageAlt" "Homepage of Dale Carnegie Chart 30 Day Practice Chart"
+      "imageSrc" "/images/featured/carnegie-chart-thumbnail.jpg"
+      "url" "https://labs.thecodeboss.dev/carnegie-chart/"
+      "urlLabel" "Carnegie Chart"
+    ) }}
+    {{ partial "home/featured-link.html" (dict
+      "imageAlt" "Homepage of Dale Carnegie Chart 30 Day Practice Chart"
+      "imageSrc" "/images/featured/carnegie-chart-thumbnail.jpg"
+      "url" "https://labs.thecodeboss.dev/carnegie-chart/"
+      "urlLabel" "Carnegie Chart"
+    ) }}
+    {{ partial "home/featured-link.html" (dict
+      "imageAlt" "Homepage of Dale Carnegie Chart 30 Day Practice Chart"
+      "imageSrc" "/images/featured/carnegie-chart-thumbnail.jpg"
+      "url" "https://labs.thecodeboss.dev/carnegie-chart/"
+      "urlLabel" "Carnegie Chart"
+    ) }}
     {{ partial "home/featured-link.html" (dict
       "imageAlt" "Homepage of Dale Carnegie Chart 30 Day Practice Chart"
       "imageSrc" "/images/featured/carnegie-chart-thumbnail.jpg"

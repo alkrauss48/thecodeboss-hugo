@@ -1,7 +1,10 @@
 <section class="relative bg-white pt-16 pb-8 text-center">
   {{ partial "arrow-down.html" (dict "color" "dark") }}
   <h2 class="uppercase font-bold text-2xl mb-12">Here's some of my portfolio</h2>
-  <div class="container-main flex">
+  <div class="
+    [ container-main px-0 md:px-4 ]
+    [ flex flex-col md:flex-row ]
+  ">
     {{ partial "home/portfolio-link.html" (dict
       "color" "teal"
       "url" "/blog"

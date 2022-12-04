@@ -1,33 +1,34 @@
 <section class="bg-white py-16 text-center">
-  <h2 class="uppercase font-bold text-2xl">I love being involved in my tech community</h2>
-  <h3 class="font-light text-lg mt-12 mb-16">Here are some of the groups that I help manage and volunteer with:</h3>
+  <div class="container-main">
+    <h2 class="uppercase font-bold text-2xl">I love being involved in my tech community</h2>
+    <h3 class="font-light text-lg mt-12 mb-16">Here are some of the groups that I help manage and volunteer with:</h3>
 
-  <div class="
-    [ container-main ]
-    [ grid gap-8 grid-cols-1 md:grid-cols-3 auto-rows-max ]
-  ">
-    {{ partial "home/community-link.html" (dict
-      "color" "teal"
-      "imageAlt" "OKC WebDevs Logo"
-      "imageSrc" "/images/community/okc-webdevs.png"
-      "url" "https://www.meetup.com/OKCWebDevs/"
-      "urlLabel" "OKC WebDevs"
-    ) }}
+    <div class="
+      [ grid gap-8 grid-cols-1 md:grid-cols-3 auto-rows-max ]
+    ">
+      {{ partial "home/community-link.html" (dict
+        "color" "teal"
+        "imageAlt" "OKC WebDevs Logo"
+        "imageSrc" "/images/community/okc-webdevs.png"
+        "url" "https://www.meetup.com/OKCWebDevs/"
+        "urlLabel" "OKC WebDevs"
+      ) }}
 
-    {{ partial "home/community-link.html" (dict
-      "color" "blue"
-      "imageAlt" "Techlahoma Logo"
-      "imageSrc" "/images/community/techlahoma.png"
-      "url" "https://www.techlahoma.org/"
-      "urlLabel" "Techlahoma"
-    ) }}
+      {{ partial "home/community-link.html" (dict
+        "color" "blue"
+        "imageAlt" "Techlahoma Logo"
+        "imageSrc" "/images/community/techlahoma.png"
+        "url" "https://www.techlahoma.org/"
+        "urlLabel" "Techlahoma"
+      ) }}
 
-    {{ partial "home/community-link.html" (dict
-      "color" "orange"
-      "imageAlt" "OKC Coffee and Code Logo"
-      "imageSrc" "/images/community/coffee-and-code.jpeg"
-      "url" "https://www.meetup.com/okccoffeeandcode/"
-      "urlLabel" "OKC Coffee and Code"
-    ) }}
+      {{ partial "home/community-link.html" (dict
+        "color" "orange"
+        "imageAlt" "OKC Coffee and Code Logo"
+        "imageSrc" "/images/community/coffee-and-code.jpeg"
+        "url" "https://www.meetup.com/okccoffeeandcode/"
+        "urlLabel" "OKC Coffee and Code"
+      ) }}
+    </div>
   </div>
 </section>
