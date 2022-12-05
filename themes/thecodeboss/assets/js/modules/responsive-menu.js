@@ -9,6 +9,10 @@ const state = {
 
 const stateHandler = {
   set(obj, prop, value) {
+    if (obj[prop] === value) {
+      return;
+    };
+
     const headerBar = document.getElementById("headerBar");
     const label = document.getElementById("responsiveNavToggleText");
     const line1 = document.getElementById("responsiveNavToggleLine1");
