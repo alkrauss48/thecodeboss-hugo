@@ -1,5 +1,24 @@
-<h2>
-  {{ .Title }}
-</h2>
+<section>
+  <div class="container-main">
+    <h2 class="text-orange text-3xl font-bold">
+      {{ with .Param "externalUrl" }}
+        <a
+          href="{{ . }}"
+          target="_blank"
+          class="hover:text-blue focus:text-blue"
+        >
+      {{ end }}
 
-{{ .Content }}
+      {{ .Title }}
+
+      {{ with .Param "externalUrl" }}
+        {{ partial "icons/external-arrow.html" (dict "class" "") }}
+        </a>
+      {{ end }}
+    </h2>
+
+    <div class="mt-8 prose prose-main">
+      {{ .Content }}
+    </div>
+  </div>
+</section>

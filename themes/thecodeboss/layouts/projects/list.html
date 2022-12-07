@@ -1,21 +1,18 @@
 {{ define "main" }}
 {{ partial "page-header.html" . }}
 <main class="bg-white py-12">
-  <div class="container-main">
+  <div class="container-main mb-12">
     <div class="prose prose-main max-w-none">
       {{.Content}}
     </div>
-    <section
-      data-title="Projects"
-      class="
-        [ mt-6 ]
-      ">
-      {{ $paginator := .Paginate (where .Pages "Type" "projects") }}
-      {{ template "_internal/pagination.html" . }}
-      {{ range $paginator.Pages }}
-      {{ partial "projects/project-item.html" . }}
-      {{ end }}
-    </section>
   </div>
+
+  {{ $paginator := .Paginate (where .Pages "Type" "projects") }}
+
+  {{ range $paginator.Pages }}
+    {{ partial "projects/project-item.html" . }}
+  {{ end }}
+
+  {{ template "_internal/pagination.html" . }}
 </main>
 {{ end }}
