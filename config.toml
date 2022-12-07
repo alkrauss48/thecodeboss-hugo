@@ -5,15 +5,18 @@ theme = 'thecodeboss'
 googleAnalytics = 'UA-38589428-1'
 
 [permalinks]
-blog = '/:year/:month/:title/'
+  blog = '/:year/:month/:title/'
 
 [markup.goldmark.renderer]
-unsafe= true
+  unsafe= true
 
 [params]
-dateFormat = "02 Jan 2006"
-logo = '/images/logo.png'
-profile = '/images/profile.jpeg'
+  dateFormat = "02 Jan 2006"
+  logo = '/images/logo.png'
+  profile = '/images/profile.jpeg'
+  title = "Aaron Krauss | Developer"
+  description = "Hi, I'm Aaron Krauss, and I'm a software developer based in Oklahoma City, OK, currently working at Clevyr."
+  images = ['/images/opengraph.jpg']
 
 [menu]
 [[menu.social]]
@@ -36,3 +39,19 @@ profile = '/images/profile.jpeg'
   name = 'My JS Fiddle'
   url = 'https://jsfiddle.net/user/thecodeboss/fiddles/'
   weight = 4
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'solarized-dark'
+    tabWidth = 4

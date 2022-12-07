@@ -1,6 +1,6 @@
 ---
-title: "Homepage"
-subtitle: "Here I am"
+title: "Aaron Krauss | Developer"
+description: "Hi, I'm Aaron Krauss, and I'm a software developer based in Oklahoma City, OK, currently working at Clevyr."
 date: "2020–012–09"
 draft: "false"
 ---
