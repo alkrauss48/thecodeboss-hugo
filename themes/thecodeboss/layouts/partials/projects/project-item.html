@@ -20,5 +20,14 @@
     <div class="mt-8 prose prose-main">
       {{ .Content }}
     </div>
+
+  </div>
+  <div class="mt-8 pt-8 bg-gray">
+    <div class="container-main">
+      {{ range .Params.images }}
+      <p>{{ .thumb }}</p>
+      <p>{{ .full }}</p>
+      {{ end }}
+    </div>
   </div>
 </section>

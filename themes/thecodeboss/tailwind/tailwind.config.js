@@ -22,6 +22,14 @@ module.exports = {
           DEFAULT: '#1470e7',
           700: '#1265d0',
         },
+        dark: {
+          400: '#595959',
+          500: '#4d4d4d',
+          DEFAULT: '#333',
+        },
+        gray: {
+          DEFAULT: '#d3d3d3',
+        },
         orange: {
           200: '#ffe5d6',
           500: '#ff843b',
@@ -31,11 +39,6 @@ module.exports = {
           200: '#e7fff9',
           500: '#23ffc8',
           DEFAULT: '#00e7ad',
-        },
-        dark: {
-          400: '#595959',
-          500: '#4d4d4d',
-          DEFAULT: '#333',
         },
       },
       fontFamily: {
