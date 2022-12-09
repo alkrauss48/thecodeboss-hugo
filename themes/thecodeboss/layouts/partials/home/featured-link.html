@@ -24,7 +24,11 @@
       [ bg-blue/[.85] ]
     ">
       <p class="font-bold text-white text-shadow">
-        Visit Site
+        {{ with .imageActionText }}
+          {{ . }}
+        {{ else }}
+          Visit Site
+        {{ end }}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 1 20 20"
@@ -38,7 +42,7 @@
     </div>
     <figcaption class="
       [ absolute -bottom-14 md:-bottom-0 left-[10%] ]
-      [ w-4/5 ]
+      [ w-4/5 text-center ]
       [ py-1 mt-4 ]
       [ bg-dark text-white ]
       [ transition-all group-hover:-bottom-14 group-focus:-bottom-14 ]

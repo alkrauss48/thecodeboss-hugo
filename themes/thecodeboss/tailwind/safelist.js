@@ -4,6 +4,7 @@ module.exports = [
   // ../layouts/partials/arrow-down.html
   'border-t-white',
   'border-t-dark',
+  'border-t-gray',
 
   // ../assets/js/modules/responsive-menu.js
   '-left-1/2', // headerBar
