@@ -2,7 +2,12 @@ import Typed from 'typed.js';
 
 export const init = () => {
   new Typed('#typed', {
-    stringsElement: '#typed-strings',
+    strings: [
+      'Tea Enthusiast',
+      'Longboarder',
+      'Dad',
+      'Developer',
+    ],
     typeSpeed: 40,
     backSpeed: 20,
   });
