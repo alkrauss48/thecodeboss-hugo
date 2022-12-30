@@ -43,18 +43,21 @@
     <figcaption class="
       [ absolute -bottom-14 md:-bottom-0 left-[10%] ]
       [ w-4/5 text-center ]
-      [ py-1 mt-4 ]
-      [ bg-dark text-white ]
+      [ pt-8 mt-4 ]
       [ transition-all group-hover:-bottom-14 group-focus:-bottom-14 ]
     ">
-      {{ .urlLabel }}
-      <div
-        data-title="Down Triangle"
-        class="
-          [ absolute bottom-full left-1/2 w-0 h-0 ]
-          [ border-x-transparent border-x-10 ]
-          [ border-b-dark border-b-10 -ml-[10px] ]
-        "></div>
+      <div class="relative">
+        <div
+          data-title="Down Triangle"
+          class="
+            [ absolute bottom-full left-1/2 w-0 h-0 ]
+            [ border-x-transparent border-x-10 ]
+            [ border-b-dark border-b-10 -ml-[10px] ]
+          "></div>
+      </div>
+      <p class="py-1 bg-dark text-white ">
+        {{ .urlLabel }}
+      </p>
     </figcaption>
   </figure>
 </a>
