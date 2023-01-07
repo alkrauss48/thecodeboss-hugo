@@ -12,11 +12,13 @@ googleAnalytics = 'UA-38589428-1'
 
 [params]
   dateFormat = "02 Jan 2006"
-  logo = '/images/logo.png'
-  profile = '/images/profile.jpeg'
+  logo = 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/global/logo/logo.png'
+  profile = 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/pages/home/profile.jpeg'
   title = "Aaron Krauss | Developer"
   description = "Hi, I'm Aaron Krauss, and I'm a software developer based in Oklahoma City, OK, currently working at Clevyr."
-  images = ['/images/opengraph.jpg']
+  images = [
+    'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/global/opengraph/opengraph.jpg'
+  ]
 
 [menu]
 [[menu.social]]
