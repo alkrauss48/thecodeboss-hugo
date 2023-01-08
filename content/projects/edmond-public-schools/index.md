@@ -3,7 +3,6 @@ title: Edmond Public Schools
 externalUrl: https://edmondschools.net
 date: "2017-05-25"
 draft: "false"
-menu: featured
 images:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/thumbnail/eps-1-th.jpeg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/full/eps-1-large.jpg
@@ -32,6 +31,6 @@ images:
 ---
 **Project Type**: 27 Web Sites
 
-**Languages Used**: Wordpress Multisite, HTML, Sass, JS, jQuery, Browserify
+**Tools Used**: Wordpress Multisite, HTML, Sass, JS, jQuery, Browserify
 
-**Company**: Staplegun
+**Developed at Company**: Staplegun
