@@ -30,5 +30,8 @@ module.exports = [
     `hover:bg-${color}-500`,
     `focus:bg-${color}-500`,
 
+    'pagination',
+    'page-item',
+
   ]).flat(),
 ];

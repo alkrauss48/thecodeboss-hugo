@@ -34,6 +34,22 @@
       prose-h2:text-left
     ;
   }
+
+  .pagination {
+    @apply flex justify-center ;
+  }
+
+  .page-item {
+    @apply mx-2;
+  }
+
+  .page-item.active a {
+    @apply text-blue;
+  }
+
+  .page-item a {
+      @apply text-xl font-bold text-teal hover:text-blue focus:text-blue;
+  }
 }
 
 @layer utilities {
