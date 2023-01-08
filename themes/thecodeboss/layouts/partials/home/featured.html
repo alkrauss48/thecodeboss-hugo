@@ -5,29 +5,18 @@
     [ container-main mt-12 ]
     [ grid gap-8 grid-cols-2 md:grid-cols-4 auto-rows-max ]
   ">
+
+    {{ range .Site.Menus.featured }}
+
+    {{ $title := .Title }}
+    {{ $imageLabel := (index .Page.Params.images 0).label }}
+
     {{ partial "home/featured-link.html" (dict
-      "imageAlt" "Homepage of Dale Carnegie Chart 30 Day Practice Chart"
-      "imageSrc" "/images/featured/carnegie-chart-thumbnail.jpg"
-      "url" "https://labs.thecodeboss.dev/carnegie-chart/"
-      "urlLabel" "Carnegie Chart"
+      "imageAlt" (printf "%s - %s" $imageLabel $title)
+      "imageSrc" (index .Page.Params.images 0).thumb
+      "url" .Page.Params.externalUrl
+      "urlLabel" $title
     ) }}
-    {{ partial "home/featured-link.html" (dict
-      "imageAlt" "Homepage of Dale Carnegie Chart 30 Day Practice Chart"
-      "imageSrc" "/images/featured/carnegie-chart-thumbnail.jpg"
-      "url" "https://labs.thecodeboss.dev/carnegie-chart/"
-      "urlLabel" "Carnegie Chart"
-    ) }}
-    {{ partial "home/featured-link.html" (dict
-      "imageAlt" "Homepage of Dale Carnegie Chart 30 Day Practice Chart"
-      "imageSrc" "/images/featured/carnegie-chart-thumbnail.jpg"
-      "url" "https://labs.thecodeboss.dev/carnegie-chart/"
-      "urlLabel" "Carnegie Chart"
-    ) }}
-    {{ partial "home/featured-link.html" (dict
-      "imageAlt" "Homepage of Dale Carnegie Chart 30 Day Practice Chart"
-      "imageSrc" "/images/featured/carnegie-chart-thumbnail.jpg"
-      "url" "https://labs.thecodeboss.dev/carnegie-chart/"
-      "urlLabel" "Carnegie Chart"
-    ) }}
+    {{ end }}
   </div>
 </section>
