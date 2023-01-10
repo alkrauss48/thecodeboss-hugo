@@ -4,7 +4,7 @@
   "description": "My personal theme for thecodeboss-hugo",
   "main": "index.js",
   "scripts": {
-    "scss-watch": "npx tailwindcss -c tailwind/tailwind.config.js -i ./assets/scss/main.scss -o ./assets/dist/style.css --watch",
+    "css-watch": "npx tailwindcss -c tailwind/tailwind.config.js -i ./assets/css/main.css -o ./assets/dist/style.css --watch",
     "js-watch": "npx rollup --config rollup.config.js --configPlugin typescript -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -22,7 +22,7 @@ npm install
 ### Build the CSS
 ```
 cd themes/thecodeboss
-npm run scss-watch
+npm run css-watch
 ```
 
 ### Build the JS
