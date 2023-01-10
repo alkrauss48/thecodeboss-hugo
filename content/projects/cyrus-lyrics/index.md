@@ -4,6 +4,7 @@ externalUrl: https://cyruskrauss.com
 date: "2022-02-24"
 draft: "false"
 menu: featured
+weight: 10
 images:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/cyrus-lyrics/thumbnail/cl-1-th.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/cyrus-lyrics/full/cl-1.jpeg

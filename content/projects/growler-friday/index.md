@@ -4,6 +4,7 @@ externalUrl: https://growlerfriday.com
 date: "2016-06-24"
 draft: "false"
 menu: featured
+weight: 30
 images:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/growler-friday/thumbnail/th-gf-1.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/growler-friday/full/gf-1.jpg
