@@ -5,18 +5,12 @@ date: "2016-02-24"
 draft: "false"
 menu: featured
 images:
-  - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/thumbnail/eps-1-th.jpeg
-    full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/full/eps-1-large.jpg
-    label: Homepage
-  - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/thumbnail/eps-2-th.jpeg
-    full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/full/eps-2-large.jpg
-    label: Menu Expanded
-  - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/thumbnail/eps-3-th.jpeg
-    full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/full/eps-3-large.jpg
-    label: Calendar Integration
-  - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/thumbnail/eps-4-th.jpeg
-    full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/full/eps-4-large.jpg
-    label: Subpage
+  - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/websockets/thumbnail/websockets-th-1.jpg
+    full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/websockets/full/websockets-1.jpg
+    label: Demo - Desktop
+  - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/websockets/thumbnail/websockets-2-th.jpg
+    full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/websockets/full/websockets-2.jpg
+    label: Responsive
 ---
 **Project Type**: Interactive websockets demo application
 
