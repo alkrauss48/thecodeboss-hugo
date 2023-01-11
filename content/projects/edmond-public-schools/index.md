@@ -30,8 +30,8 @@ images:
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/full/eps-responsive.jpg
     label: Mobile Responsive
 ---
-**Project Type**: 27 Web Sites
+**Project Type**: 27 Websites
 
-**Tools Used**: Wordpress Multisite, HTML, Sass, JS, jQuery, Browserify
+**Tools Used**: Wordpress Multisite, HTML, Sass, JS, jQuery, Browserify, Gulp.js
 
 **Developed at Company**: Staplegun
