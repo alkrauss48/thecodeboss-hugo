@@ -2,7 +2,6 @@
 title: OK Dept of Commerce
 date: "2014-08-01"
 draft: "false"
-menu: featured
 weight: 21
 images:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/odoc/thumbnail/th-odoc-1.jpg

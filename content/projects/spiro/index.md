@@ -3,7 +3,6 @@ title: Spiro!
 externalUrl: https://apps.apple.com/app/id1547816437
 date: "2022-02-24"
 draft: "false"
-menu: featured
 weight: 22
 images:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/spiro/thumbnail/spiro-4-th.jpg

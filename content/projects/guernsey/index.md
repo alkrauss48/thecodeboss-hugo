@@ -3,7 +3,6 @@ title: Guernsey
 externalUrl: https://guernsey.us
 date: "2016-10-01"
 draft: "false"
-menu: featured
 weight: 23
 images:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/guernsey/thumbnail/th-gsy-1.jpg

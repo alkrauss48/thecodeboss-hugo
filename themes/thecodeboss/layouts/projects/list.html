@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  {{ $paginator := .Paginate (where .Pages "Type" "projects") }}
+  {{ $paginator := .Paginate (where .Pages "Type" "projects") 5 }}
 
   {{ range $paginator.Pages }}
     {{ partial "projects/project-item.html" . }}

@@ -2,7 +2,7 @@
 title: Websockets Demo
 externalUrl: https://websockets.thecodeboss.dev
 date: "2016-02-24"
-draft: "false"
+draft: "true"
 menu: featured
 weight: 40
 images:
