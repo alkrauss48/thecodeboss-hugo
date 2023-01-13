@@ -8,6 +8,11 @@
       <time>{{ .Date | time.Format ":date_long" }}</time>
     </p>
     <hr class="border-t-4 border-blue w-24 mt-4 mb-6">
+
+    {{ with .Param "videoUrl" }}
+      {{ partial "blog/blog-video.html" . }}
+    {{ end }}
+
     <div class="prose prose-main max-w-none">
     {{.Content}}
     </div>
