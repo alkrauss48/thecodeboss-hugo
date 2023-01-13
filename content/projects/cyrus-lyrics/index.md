@@ -11,13 +11,13 @@ images:
     label: App Icon
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/cyrus-lyrics/thumbnail/IMG_0325.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/cyrus-lyrics/full/IMG_0325.PNG
-    label: Homepage
+    label: Main Screen
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/cyrus-lyrics/thumbnail/IMG_0326.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/cyrus-lyrics/full/IMG_0326.PNG
     label: List of Genres
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/cyrus-lyrics/thumbnail/IMG_0327.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/cyrus-lyrics/full/IMG_0327.PNG
-    label: Lyrics Page
+    label: Lyrics Screen
 ---
 **Project Type**: iOS Mobile App + Back-end API
 
