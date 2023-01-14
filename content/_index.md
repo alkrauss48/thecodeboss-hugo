@@ -1,7 +1,7 @@
 ---
-title: "Aaron Krauss | Developer"
-description: "Hi, I'm Aaron Krauss, and I'm a software developer based in Oklahoma City, OK, currently working at Clevyr."
-date: "2020–012–09"
+title: Aaron Krauss | Developer
+description: Hi, I'm Aaron Krauss, and I'm a software developer based in Oklahoma City, OK, currently working at Clevyr.
+date: "2023–01–13"
 draft: "false"
 ---
 ## GET TO KNOW ME
