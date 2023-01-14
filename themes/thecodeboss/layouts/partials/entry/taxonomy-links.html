@@ -10,8 +10,8 @@
         <a
           href="{{
               cond (eq $currentPage.Page.Permalink .Page.Permalink)
-              "/content"
-              .Page.Permalink
+              "/content#main"
+              (printf "%s#main" .Page.Permalink)
             }}"
           class="
             inline-block

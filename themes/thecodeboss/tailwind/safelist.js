@@ -48,10 +48,12 @@ module.exports = [
   ]).flat(),
 
   ...TAXONOMIES.map((taxonomy) => [
-    `border-${taxonomy}`,
     `bg-${taxonomy}`,
+    `border-${taxonomy}`,
+    `text-${taxonomy}`,
     `hover:text-${taxonomy}`,
     `focus:text-${taxonomy}`,
-    `text-${taxonomy}`,
+    `hover:bg-${taxonomy}-700`,
+    `focus:bg-${taxonomy}-700`,
   ]).flat(),
 ];
