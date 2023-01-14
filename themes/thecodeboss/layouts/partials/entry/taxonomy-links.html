@@ -16,16 +16,14 @@
           class="
             inline-block
             font-bold
-            mr-4
-            mt-4
-            py-4
-            px-12
+            mr-2 mt-3 md:mr-4 md:mt-4
+            py-2 px-2 md:py-4 md:px-12
             border-4
             border-{{ .Page.Title | urlize }}
             {{
               cond (eq $currentPage.Page.Permalink .Page.Permalink)
               (printf "text-%s bg-white" ( urlize .Page.Title ))
-              (printf "text-white bg-%[1]s hover:text-%[1]s hover:bg-white" ( urlize .Page.Title ))
+              (printf "text-white bg-%[1]s hover:text-%[1]s hover:bg-white focus:text-%[1]s focus:bg-white" ( urlize .Page.Title ))
             }}"
         >{{ .Page.Title | humanize | title }}</a>
       </li>

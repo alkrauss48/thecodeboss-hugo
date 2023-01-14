@@ -51,6 +51,7 @@ module.exports = [
     `border-${taxonomy}`,
     `bg-${taxonomy}`,
     `hover:text-${taxonomy}`,
+    `focus:text-${taxonomy}`,
     `text-${taxonomy}`,
   ]).flat(),
 ];
