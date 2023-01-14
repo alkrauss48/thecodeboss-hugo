@@ -3,8 +3,8 @@ title: About
 date: "2022–11–03"
 type: page
 menu: main
-headerSrc: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/pages/about/header.jpg
-headerAltText: "A view from a nice German village. I grew up in Germany!"
+headerSrc: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/pages/about/scissortail-bridge.jpg
+headerAltText: A night-time view of the Scissortail Bridge in Oklahoma City
 description: I'm Aaron Krauss, and I'm a full stack developer based out of OKC, Oklahoma!
 draft: "false"
 ---
