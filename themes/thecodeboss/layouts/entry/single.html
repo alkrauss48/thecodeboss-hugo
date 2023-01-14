@@ -7,7 +7,8 @@
     <p class="text-sm font-light">
       <time>{{ .Date | time.Format ":date_long" }}</time>
     </p>
-    <hr class="border-t-4 border-blue w-24 mt-4 mb-6">
+
+    {{ partial "hr-short.html" . }}
 
     {{ with .Param "videoUrl" }}
       {{ partial "entry/entry-video.html" . }}

@@ -1,29 +1,35 @@
-<nav>
-  <ul class="flex">
-    {{ $currentPage := .current }}
-    {{ range .taxonomies }}
-    <li>
-      <a
-        href="{{
-            cond (eq $currentPage.Page.Permalink .Page.Permalink)
-            "/content"
-            .Page.Permalink
-          }}"
-        class="
-          inline-block
-          font-bold
-          mr-4
-          py-4
-          px-12
-          border-4
-          border-{{ .Page.Title | urlize }}
-          {{
-            cond (eq $currentPage.Page.Permalink .Page.Permalink)
-            "text-black bg-white"
-            "text-white bg-black hover:text-black hover:bg-white"
-          }}"
-      >{{ .Page.Title | humanize }}</a>
-    </li>
-    {{ end }}
-  </ul>
-</nav>
+{{ $currentPage := .current }}
+<section class="mb-8">
+  <header class="prose prose-main">
+    <h2>{{ .title }}</h2>
+  </header>
+  <nav>
+    <ul>
+      {{ range .taxonomies }}
+      <li class="inline-block">
+        <a
+          href="{{
+              cond (eq $currentPage.Page.Permalink .Page.Permalink)
+              "/content"
+              .Page.Permalink
+            }}"
+          class="
+            inline-block
+            font-bold
+            mr-4
+            mt-4
+            py-4
+            px-12
+            border-4
+            border-{{ .Page.Title | urlize }}
+            {{
+              cond (eq $currentPage.Page.Permalink .Page.Permalink)
+              (printf "text-%s bg-white" ( urlize .Page.Title ))
+              (printf "text-white bg-%[1]s hover:text-%[1]s hover:bg-white" ( urlize .Page.Title ))
+            }}"
+        >{{ .Page.Title | humanize | title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+</section>

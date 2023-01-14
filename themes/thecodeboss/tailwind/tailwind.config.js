@@ -14,18 +14,7 @@ module.exports = {
         'featured': '4px 4px 10px black',
       },
       colors: {
-        ruby: {
-          DEFAULT: '#ff0000',
-        },
-        ["programming-concepts"]: {
-          DEFAULT: '#00ff00',
-        },
-        blog: {
-          DEFAULT: '#0000ff',
-        },
-        talks: {
-          DEFAULT: '#00ffff',
-        },
+        // Global Colors
         blue: {
           200: '#e9f1fd',
           500: '#4790ef',
@@ -49,6 +38,38 @@ module.exports = {
           200: '#e7fff9',
           500: '#23ffc8',
           DEFAULT: '#00e7ad',
+        },
+
+        // Taxonomy Colors
+        blog: {
+          DEFAULT: '#000000',
+        },
+        talks: {
+          DEFAULT: '#9000f0',
+        },
+        ruby: {
+          DEFAULT: '#ff1440',
+        },
+        javascript: {
+          DEFAULT: '#e6b800',
+        },
+        random: {
+          DEFAULT: '#4441d1',
+        },
+        tools: {
+          DEFAULT: '#818187',
+        },
+        ["front-end"]: {
+          DEFAULT: '#ff2317',
+        },
+        ["non-tech"]: {
+          DEFAULT: '#e68600',
+        },
+        ["how-things-work"]: {
+          DEFAULT: '#41c0f9',
+        },
+        ["programming-concepts"]: {
+          DEFAULT: '#37d552',
         },
       },
       fontFamily: {

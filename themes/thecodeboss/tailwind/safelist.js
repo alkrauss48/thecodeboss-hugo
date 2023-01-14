@@ -1,5 +1,16 @@
 const COLORS = ['teal', 'blue', 'orange'];
-const TAXONOMIES = ['ruby', 'programming-concepts', 'talks', 'blog'];
+const TAXONOMIES = [
+  'blog',
+  'talks',
+  'ruby',
+  'programming-concepts',
+  'random',
+  'tools',
+  'front-end',
+  'how-things-work',
+  'non-tech',
+  'javascript',
+];
 
 module.exports = [
   // ../layouts/partials/arrow-down.html
@@ -38,5 +49,8 @@ module.exports = [
 
   ...TAXONOMIES.map((taxonomy) => [
     `border-${taxonomy}`,
+    `bg-${taxonomy}`,
+    `hover:text-${taxonomy}`,
+    `text-${taxonomy}`,
   ]).flat(),
 ];

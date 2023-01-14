@@ -4,7 +4,12 @@ date: "2017-05-25"
 categories:
 - blog
 tags:
-- Programming Concepts
+- Front End
+- How Things Work
+- Javascript
+- Tools
+- Non Tech
+- Random
 - Ruby
 description: Ever wonder how random numbers work in software?
 draft: "false"
