@@ -49,27 +49,35 @@ module.exports = {
         },
         ruby: {
           DEFAULT: '#ff1440',
+          700: '#d80028',
         },
         javascript: {
           DEFAULT: '#e6b800',
+          700: '#bf9900',
         },
         random: {
           DEFAULT: '#4441d1',
+          700: '#2d2aad',
         },
         tools: {
           DEFAULT: '#818187',
+          700: '#646469',
         },
         ["front-end"]: {
           DEFAULT: '#ff2317',
+          700: '#db0b00',
         },
         ["non-tech"]: {
           DEFAULT: '#e68600',
+          700: '#bf6f00',
         },
         ["how-things-work"]: {
-          DEFAULT: '#41c0f9',
+          DEFAULT: '#2ebaf8',
+          700: '#07a0e4',
         },
         ["programming-concepts"]: {
           DEFAULT: '#37d552',
+          700: '#24ad3c',
         },
       },
       fontFamily: {
