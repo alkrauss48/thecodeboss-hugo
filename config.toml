@@ -5,8 +5,7 @@ theme = 'thecodeboss'
 googleAnalytics = 'UA-38589428-1'
 
 [permalinks]
-  blog = '/:year/:month/:title/'
-  talks = '/:year/:month/:title/'
+  entry = '/:year/:month/:title/'
 
 [markup.goldmark.renderer]
   unsafe= true

@@ -1,0 +1,24 @@
+<a class="
+  [ relative group inline-block w-full h-40 md:h-60 p-4 ]
+  [ bg-blue text-white hover:bg-blue-700 focus:bg-blue-700 text-center ]
+  [ flex flex-col justify-center ]
+  "
+  href="{{ .RelPermalink }}"
+  >
+    <h2 class="
+      [ text-lg ]
+      [ transition ease-in-out duration-300 ]
+      [ md:group-hover:-translate-y-8 md:group-focus:-translate-y-8 ]
+      ">
+        {{ .Title }}
+    </h2>
+    <p class="
+      [ absolute bottom-10 left-0 ]
+      [ text-sm font-light w-full px-4 ]
+      [ transition ease-in-out duration-300 ]
+      [ md:group-hover:-translate-y-4 md:group-focus:-translate-y-4 ]
+      [ opacity-0 md:group-hover:opacity-100 md:group-focus:opacity-100 ]
+    ">
+      {{ .Summary }}
+    </p>
+</a>

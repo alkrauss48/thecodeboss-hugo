@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<main class="bg-white py-12">
+  <div class="container-main">
+    <div class="prose prose-main max-w-none">
+      {{.Content}}
+    </div>
+
+    <ul>
+      {{ range .Site.Taxonomies.categories }}
+      <li>
+        <a href="{{ .Page.Permalink }}">{{ .Page.Title | urlize }}</a> {{ .Count }}
+      </li>
+      {{ end }}
+    </ul>
+
+    <ul>
+      {{ range .Site.Taxonomies.tags }}
+      <li>
+        <a href="{{ .Page.Permalink }}">{{ .Page.Title | urlize }}</a> {{ .Count }}
+      </li>
+      {{ end }}
+    </ul>
+
+    <section class="
+      [ mt-6 ]
+      [ grid gap-4 grid-cols-2 auto-rows-max ]
+      [ md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 ]
+    ">
+      {{ $paginator := .Paginate (where .Pages "Type" "entry") }}
+
+      {{ range $paginator.Pages }}
+        {{ partial "entry/entry-card.html" . }}
+      {{ end }}
+
+      {{ template "_internal/pagination.html" . }}
+    </section>
+  </div>
+</main>
+{{ end }}
