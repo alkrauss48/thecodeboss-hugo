@@ -4,15 +4,18 @@
     {{ range .taxonomies }}
     <li>
       <a
-        href="{{ .Page.Permalink }}"
+        href="{{
+            cond (eq $currentPage.Page.Permalink .Page.Permalink)
+            "/content"
+            .Page.Permalink
+          }}"
         class="
           inline-block font-bold mr-4 py-4 px-12 border-4 border-black
           {{
             cond (eq $currentPage.Page.Permalink .Page.Permalink)
             "text-black bg-white"
             "text-white bg-black hover:text-black hover:bg-white"
-          }}
-        "
+          }}"
       >{{ .Page.Title | humanize }}</a>
     </li>
     {{ end }}
