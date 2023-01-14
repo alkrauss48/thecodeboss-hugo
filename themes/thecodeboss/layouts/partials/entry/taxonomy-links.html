@@ -10,7 +10,13 @@
             .Page.Permalink
           }}"
         class="
-          inline-block font-bold mr-4 py-4 px-12 border-4 border-black
+          inline-block
+          font-bold
+          mr-4
+          py-4
+          px-12
+          border-4
+          border-{{ .Page.Title | urlize }}
           {{
             cond (eq $currentPage.Page.Permalink .Page.Permalink)
             "text-black bg-white"

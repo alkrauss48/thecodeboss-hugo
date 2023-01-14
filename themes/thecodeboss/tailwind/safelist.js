@@ -1,4 +1,5 @@
 const COLORS = ['teal', 'blue', 'orange'];
+const TAXONOMIES = ['ruby', 'programming-concepts', 'talks', 'blog'];
 
 module.exports = [
   // ../layouts/partials/arrow-down.html
@@ -33,5 +34,9 @@ module.exports = [
     'pagination',
     'page-item',
 
+  ]).flat(),
+
+  ...TAXONOMIES.map((taxonomy) => [
+    `border-${taxonomy}`,
   ]).flat(),
 ];

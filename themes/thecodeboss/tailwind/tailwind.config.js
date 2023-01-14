@@ -14,6 +14,18 @@ module.exports = {
         'featured': '4px 4px 10px black',
       },
       colors: {
+        ruby: {
+          DEFAULT: '#ff0000',
+        },
+        ["programming-concepts"]: {
+          DEFAULT: '#00ff00',
+        },
+        blog: {
+          DEFAULT: '#0000ff',
+        },
+        talks: {
+          DEFAULT: '#00ffff',
+        },
         blue: {
           200: '#e9f1fd',
           500: '#4790ef',
