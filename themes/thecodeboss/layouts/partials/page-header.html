@@ -3,8 +3,8 @@
     <img
       data-title="header-image"
       class="[ h-56 md:h-96 w-full ][ object-cover ][ fixed -z-10 ]"
-      alt="{{ .Params.headerAltText }}"
-      src="{{ .Params.headerSrc }}"
+      alt="{{ or .Params.headerAltText "The downtown Oklahoma City skyline" }}"
+      src="{{ or .Params.headerSrc "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/pages/entry/okc-skyline.jpg" }}"
       />
   </section>
   <section class="[ bg-orange/80 ][ pt-12 pb-4 -mt-8 ]">
