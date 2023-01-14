@@ -1,14 +1,17 @@
 <nav>
   <ul class="flex">
-    {{ range . }}
+    {{ $currentPage := .current }}
+    {{ range .taxonomies }}
     <li>
       <a
         href="{{ .Page.Permalink }}"
         class="
-          [ inline-block py-4 px-12 border-4 border-black ]
-          [ text-white bg-black mr-4 ]
-          [ text-white font-bold ]
-          [ hover:text-black hover:bg-white ]
+          inline-block font-bold mr-4 py-4 px-12 border-4 border-black
+          {{
+            cond (eq $currentPage.Page.Permalink .Page.Permalink)
+            "text-black bg-white"
+            "text-white bg-black hover:text-black hover:bg-white"
+          }}
         "
       >{{ .Page.Title | humanize }}</a>
     </li>

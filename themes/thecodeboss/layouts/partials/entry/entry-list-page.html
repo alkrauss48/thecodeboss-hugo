@@ -5,8 +5,14 @@
       {{.Content}}
     </div>
 
-    {{ partial "entry/taxonomy-links.html" .Site.Taxonomies.categories }}
-    {{ partial "entry/taxonomy-links.html" .Site.Taxonomies.tags }}
+    {{ partial "entry/taxonomy-links.html" (dict
+      "current" .
+      "taxonomies" .Site.Taxonomies.categories
+    ) }}
+    {{ partial "entry/taxonomy-links.html" (dict
+      "current" .
+      "taxonomies" .Site.Taxonomies.tags
+    ) }}
 
     <section class="
       [ mt-6 ]
