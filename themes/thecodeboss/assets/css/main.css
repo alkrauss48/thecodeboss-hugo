@@ -48,7 +48,7 @@
   }
 
   .page-item a {
-      @apply text-xl font-bold text-teal hover:text-blue focus:text-blue;
+      @apply text-2xl md:text-3xl md:mx-2 font-bold text-teal hover:text-blue focus:text-blue;
   }
 }
 
