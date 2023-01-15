@@ -55,6 +55,10 @@ module.exports = {
           DEFAULT: '#e6b800',
           700: '#bf9900',
         },
+        python: {
+          DEFAULT: '#147e55',
+          700: '#0f5c3e',
+        },
         random: {
           DEFAULT: '#4441d1',
           700: '#2d2aad',

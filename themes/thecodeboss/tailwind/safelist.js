@@ -5,6 +5,7 @@ const TAXONOMIES = [
   'ruby',
   'programming-concepts',
   'random',
+  'python',
   'tools',
   'front-end',
   'how-things-work',
