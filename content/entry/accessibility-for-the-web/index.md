@@ -2,7 +2,7 @@
 title: Accessibility for the Web
 date: "2019-05-29"
 categories:
-- talks
+- Talks
 tags:
 - Front End
 draft: "false"

@@ -2,7 +2,7 @@
 title: How Swift Works Under the Hood
 date: "2021-07-15"
 categories:
-- talks
+- Talks
 tags:
 - How Things Work
 draft: "false"

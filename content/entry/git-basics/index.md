@@ -2,7 +2,7 @@
 title: Git Basics – A YouTube Shorts Series
 date: "2022-03-15"
 categories:
-- talks
+- Talks
 tags:
 - Devops
 draft: "false"

@@ -2,7 +2,7 @@
 title: Continuous Deployment with GitOps
 date: "2022-10-19"
 categories:
-- talks
+- Talks
 tags:
 - Devops
 draft: "false"

@@ -2,7 +2,7 @@
 title: How Blocks Work in Ruby
 date: "2019-04-11"
 categories:
-- talks
+- Talks
 tags:
 - Ruby
 draft: "false"

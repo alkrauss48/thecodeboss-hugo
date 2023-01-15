@@ -2,7 +2,7 @@
 title: What is "this"?
 date: "2018-03-18"
 categories:
-- talks
+- Talks
 tags:
 - Javascript
 draft: "false"

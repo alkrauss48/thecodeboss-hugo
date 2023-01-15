@@ -2,7 +2,7 @@
 title: Zen and the Art of the IT Backup
 date: "2019-04-16"
 categories:
-- talks
+- Talks
 tags:
 - Random
 - Devops

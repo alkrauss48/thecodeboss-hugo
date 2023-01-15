@@ -2,7 +2,7 @@
 title: Metaprogramming in Ruby
 date: "2019-10-10"
 categories:
-- talks
+- Talks
 tags:
 - Ruby
 draft: "false"

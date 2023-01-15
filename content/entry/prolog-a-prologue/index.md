@@ -2,7 +2,7 @@
 title: Prolog - a Prologue
 date: "2019-01-21"
 categories:
-- talks
+- Talks
 tags:
 - How Things Work
 - Random

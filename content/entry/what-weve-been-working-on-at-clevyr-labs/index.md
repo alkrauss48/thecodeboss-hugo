@@ -2,7 +2,7 @@
 title: What We've Been Working on at Clevyr Labs
 date: "2018-02-24"
 categories:
-- talks
+- Talks
 tags:
 - Random
 draft: "false"

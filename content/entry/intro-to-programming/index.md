@@ -2,7 +2,7 @@
 title: Intro to Programming
 date: "2017-11-12"
 categories:
-- talks
+- Talks
 tags:
 - Random
 draft: "false"

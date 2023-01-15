@@ -2,7 +2,7 @@
 title: Refactoring and Testing JavaScript
 date: "2022-03-16"
 categories:
-- talks
+- Talks
 tags:
 - Javascript
 draft: "false"

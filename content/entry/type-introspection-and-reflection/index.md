@@ -2,7 +2,7 @@
 title: Type Introspection and Reflection
 date: "2015-10-08"
 categories:
-- talks
+- Talks
 tags:
 - Programming Concepts
 - Ruby

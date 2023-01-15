@@ -2,7 +2,7 @@
 title: How to GraphQL
 date: "2020-02-18"
 categories:
-- talks
+- Talks
 tags:
 - How Things Work
 - Ruby

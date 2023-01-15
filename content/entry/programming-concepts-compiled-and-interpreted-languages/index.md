@@ -2,7 +2,7 @@
 title: "Programming Concepts: Compiled and Interpreted Languages"
 date: "2015-07-24"
 categories:
-- blog
+- Blog
 tags:
 - Programming Concepts
 draft: "false"

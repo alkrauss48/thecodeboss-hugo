@@ -2,7 +2,7 @@
 title: Zero Downtime Deployments with Modern DevOps Tools
 date: "2021-12-01"
 categories:
-- talks
+- Talks
 tags:
 - Devops
 draft: "false"

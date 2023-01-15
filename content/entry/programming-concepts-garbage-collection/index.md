@@ -2,7 +2,7 @@
 title: "Programming Concepts: Garbage Collection"
 date: "2017-01-26"
 categories:
-- blog
+- Blog
 tags:
 - Programming Concepts
 draft: "false"

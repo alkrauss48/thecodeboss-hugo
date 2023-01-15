@@ -2,7 +2,7 @@
 title: My Interviews with Amazon
 date: "2018-11-01"
 categories:
-- talks
+- Talks
 tags:
 - Random
 draft: "false"

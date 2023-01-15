@@ -2,7 +2,7 @@
 title: Building an Efficient ETL Process with Laravel
 date: "2021-06-15"
 categories:
-- talks
+- Talks
 tags:
 - Random
 draft: "false"

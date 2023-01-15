@@ -2,7 +2,7 @@
 title: "Programming Concepts: Type Introspection and Reflection"
 date: "2016-02-12"
 categories:
-- blog
+- Blog
 tags:
 - Programming Concepts
 draft: "false"

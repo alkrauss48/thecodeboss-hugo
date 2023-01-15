@@ -2,7 +2,7 @@
 title: Using Terraform, Packer, and Ansible Together
 date: "2018-04-20"
 categories:
-- talks
+- Talks
 tags:
 - Devops
 draft: "false"

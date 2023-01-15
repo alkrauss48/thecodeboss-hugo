@@ -2,7 +2,7 @@
 title: How JWTs Work
 date: "2020-09-15"
 categories:
-- talks
+- Talks
 tags:
 - How Things Work
 draft: "false"

@@ -2,7 +2,7 @@
 title: Getting Started with F#
 date: "2017-06-05"
 categories:
-- talks
+- Talks
 tags:
 - Random
 draft: "false"

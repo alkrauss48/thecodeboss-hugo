@@ -2,7 +2,7 @@
 title: Python + Neo4J
 date: "2019-02-13"
 categories:
-- talks
+- Talks
 tags:
 - Python
 - How Things Work

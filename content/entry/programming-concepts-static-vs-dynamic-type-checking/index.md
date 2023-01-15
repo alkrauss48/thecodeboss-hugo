@@ -2,7 +2,7 @@
 title: "Programming Concepts: Static vs Dynamic Type Checking"
 date: "2015-11-20"
 categories:
-- blog
+- Blog
 tags:
 - Programming Concepts
 draft: "false"

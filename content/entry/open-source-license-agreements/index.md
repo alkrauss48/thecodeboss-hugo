@@ -2,7 +2,7 @@
 title: Open Source License Agreements
 date: "2018-06-19"
 categories:
-- talks
+- Talks
 tags:
 - Random
 - How Things Work

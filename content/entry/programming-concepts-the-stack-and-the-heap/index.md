@@ -2,7 +2,7 @@
 title: "Programming Concepts: The Stack and the Heap"
 date: "2014-10-04"
 categories:
-- blog
+- Blog
 tags:
 - Programming Concepts
 draft: "false"

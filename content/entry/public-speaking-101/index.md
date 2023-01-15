@@ -2,7 +2,7 @@
 title: Public Speaking 101
 date: "2018-06-04"
 categories:
-- talks
+- Talks
 tags:
 - Non-Tech
 draft: "false"

@@ -2,7 +2,7 @@
 title: Why Random Numbers are Impossible in Software
 date: "2017-05-25"
 categories:
-- blog
+- Blog
 tags:
 - Random
 description: Ever wonder how random numbers work in software?

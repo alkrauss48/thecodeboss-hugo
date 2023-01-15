@@ -2,7 +2,7 @@
 title: Python vs. Ruby
 date: "2017-08-09"
 categories:
-- talks
+- Talks
 tags:
 - Python
 - Ruby

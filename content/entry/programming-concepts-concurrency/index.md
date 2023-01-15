@@ -2,7 +2,7 @@
 title: "Programming Concepts: Concurrency"
 date: "2015-10-09"
 categories:
-- blog
+- Blog
 tags:
 - Programming Concepts
 draft: "false"

@@ -2,7 +2,7 @@
 title: Building a Neural Network in Python
 date: "2018-09-12"
 categories:
-- talks
+- Talks
 tags:
 - Python
 - How Things Work

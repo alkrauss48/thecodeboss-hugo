@@ -2,7 +2,7 @@
 title: Building Pong in Native JavaScript
 date: "2018-02-20"
 categories:
-- talks
+- Talks
 tags:
 - Javascript
 draft: "false"

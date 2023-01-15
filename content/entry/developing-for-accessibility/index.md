@@ -2,7 +2,7 @@
 title: Developing for Accessibility
 date: "2022-10-28"
 categories:
-- talks
+- Talks
 tags:
 - Front End
 - Javascript

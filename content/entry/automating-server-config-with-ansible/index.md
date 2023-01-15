@@ -2,7 +2,7 @@
 title: Automating Server Config with Ansible
 date: "2018-04-11"
 categories:
-- talks
+- Talks
 tags:
 - Devops
 draft: "false"

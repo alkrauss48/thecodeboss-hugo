@@ -2,7 +2,7 @@
 title: Documenting and Refactoring Python
 date: "2018-11-14"
 categories:
-- talks
+- Talks
 tags:
 - Python
 draft: "false"

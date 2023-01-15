@@ -2,7 +2,7 @@
 title: Core Functional Programming Concepts
 date: "2016-12-01"
 categories:
-- blog
+- Blog
 tags:
 - Programming Concepts
 draft: "false"
