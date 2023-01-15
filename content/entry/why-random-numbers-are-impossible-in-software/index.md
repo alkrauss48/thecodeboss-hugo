@@ -4,13 +4,7 @@ date: "2017-05-25"
 categories:
 - blog
 tags:
-- Front End
-- How Things Work
-- Javascript
-- Tools
-- Non Tech
 - Random
-- Ruby
 description: Ever wonder how random numbers work in software?
 draft: "false"
 summary: Ever wonder how random numbers work in software?

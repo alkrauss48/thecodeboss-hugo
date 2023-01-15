@@ -5,7 +5,7 @@ categories:
 - talks
 tags:
 - Random
-- Tools
+- Devops
 draft: "false"
 description: Check out my talk "Zen and the Art of the IT Backup" given on 2019-04-16.
 videoUrl: https://www.youtube.com/embed/lVAr0xOVXSE

@@ -6,7 +6,7 @@ const TAXONOMIES = [
   'programming-concepts',
   'random',
   'python',
-  'tools',
+  'devops',
   'front-end',
   'how-things-work',
   'non-tech',

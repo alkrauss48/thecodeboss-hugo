@@ -5,7 +5,7 @@ categories:
 - talks
 tags:
 - Ruby
-- Tools
+- Devops
 draft: "false"
 description: Check out my talk "Rails with Docker," given on 2017-04-01.
 

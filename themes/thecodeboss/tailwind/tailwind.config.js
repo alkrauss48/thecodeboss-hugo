@@ -63,7 +63,7 @@ module.exports = {
           DEFAULT: '#4441d1',
           700: '#2d2aad',
         },
-        tools: {
+        devops: {
           DEFAULT: '#818187',
           700: '#646469',
         },

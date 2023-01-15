@@ -4,7 +4,7 @@ date: "2018-04-11"
 categories:
 - talks
 tags:
-- Tools
+- Devops
 draft: "false"
 description: Check out my talk "Automating Server Config with Ansible" given on 2018-04-11.
 
