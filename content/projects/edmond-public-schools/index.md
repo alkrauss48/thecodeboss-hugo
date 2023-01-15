@@ -13,7 +13,7 @@ images:
     label: Menu Expanded
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/thumbnail/eps-3-th.jpeg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/full/eps-3-large.jpg
-    label: Calendar Integration
+    label: Calendar
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/thumbnail/eps-4-th.jpeg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/full/eps-4-large.jpg
     label: Subpage

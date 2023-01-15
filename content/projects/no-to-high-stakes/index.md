@@ -15,7 +15,7 @@ images:
     label: Find Your Reps
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/no-to-high-stakes/thumbnail/oea_th_1.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/no-to-high-stakes/full/oea_big_1.jpg
-    label: Facebook Your Reps
+    label: Facebook w/ Reps
 ---
 **Project Type**: Front-end Web App
 
