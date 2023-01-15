@@ -14,6 +14,9 @@
       prose-a:text-teal hover:prose-a:text-blue focus:prose-a:text-blue
       prose-a:font-bold
       prose-p:leading-loose
+      prose-hr:border-t-4 prose-hr:border-blue
+      prose-hr:w-24 prose-hr:mt-4 prose-hr:mb-6
+      prose-pre:my-0 prose-pre:text-base
     ;
   }
 
@@ -71,4 +74,5 @@
 
 .highlight > div {
   overflow-x: scroll;
+  margin: .5rem 0;
 }

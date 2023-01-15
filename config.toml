@@ -55,5 +55,5 @@ googleAnalytics = 'UA-38589428-1'
     lineNumbersInTable = true
     noClasses = true
     noHl = false
-    style = 'solarized-dark'
+    style = 'solarized-light'
     tabWidth = 4
