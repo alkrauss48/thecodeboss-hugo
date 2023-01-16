@@ -145,6 +145,6 @@ You can obviously issue GET requests by visiting these pages in your browser, or
 That’s it?
 ----------
 
-No, of course that’s not it, but look at what we’ve done so far – we’ve built a relational database with a fully functioning JSON API on top that can handle any of the 4 main request types, and we did it in practically no time flat. We have a lot more to talk about such as serialization, authentication, and an overview post discussing some of the bigger questions that come up when you’re building an API, so if you’re ready, feel free to [move onto part 2](http://thesocietea.org/2015/03/building-a-json-api-with-rails-part-2-serialization/ "Building a JSON API with Rails ? Part 2: Serialization").
+No, of course that’s not it, but look at what we’ve done so far – we’ve built a relational database with a fully functioning JSON API on top that can handle any of the 4 main request types, and we did it in practically no time flat. We have a lot more to talk about such as serialization, authentication, and an overview post discussing some of the bigger questions that come up when you’re building an API, so if you’re ready, feel free to [move onto part 2](/2015/03/building-a-json-api-with-rails-part-2-serialization/ "Building a JSON API with Rails ? Part 2: Serialization").
 
 Happy API Building!
