@@ -17,7 +17,8 @@
   [ bg-{{ $tag }} hover:bg-{{ $tag }}-700 focus:bg-{{ $tag }}-700 ]
   [ flex flex-col justify-center ]
   "
-  href="{{ .entry.RelPermalink }}"
+  href="{{ .entry.Params.externalUrl | default .entry.RelPermalink }}"
+  {{ with .entry.Params.externalUrl }} target="_blank" {{end }}
   >
     <h2 class="
       [ text-lg ]
@@ -25,6 +26,9 @@
       [ md:group-hover:-translate-y-8 md:group-focus:-translate-y-8 ]
       ">
       {{ .entry.Title }}
+      {{ with .entry.Params.externalUrl }}
+        {{ partial "icons/external-arrow.html" (dict "class" "w-5 h-5 inline ml-1") }}
+      {{ end }}
     </h2>
     <p class="
       [ absolute bottom-10 left-0 ]
@@ -33,6 +37,6 @@
       [ md:group-hover:-translate-y-4 md:group-focus:-translate-y-4 ]
       [ opacity-0 md:group-hover:opacity-100 md:group-focus:opacity-100 ]
     ">
-      {{ .entry.Summary | truncate 60 }}
+      {{ .entry.Summary | truncate 70 }}
     </p>
 </a>
