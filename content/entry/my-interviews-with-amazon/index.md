@@ -4,7 +4,7 @@ date: "2018-11-01"
 categories:
 - Talks
 tags:
-- Random
+- Non Tech
 draft: "false"
 description: Check out my talk "My Interviews with Amazon," given on 2018-11-01.
 

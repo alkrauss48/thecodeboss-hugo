@@ -4,7 +4,6 @@ date: "2019-04-16"
 categories:
 - Talks
 tags:
-- Random
 - Devops
 draft: "false"
 description: Check out my talk "Zen and the Art of the IT Backup" given on 2019-04-16.

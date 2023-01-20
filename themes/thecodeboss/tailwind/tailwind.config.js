@@ -71,6 +71,10 @@ module.exports = {
           DEFAULT: '#2e65a3',
           700: '#214875',
         },
+        php: {
+          DEFAULT: '#f500e4',
+          700: '#ba00ad',
+        },
         ["front-end"]: {
           DEFAULT: '#d35836',
           700: '#a94225',
