@@ -4,8 +4,7 @@ date: "2019-01-21"
 categories:
 - Talks
 tags:
-- How Things Work
-- Random
+- Prolog
 draft: "false"
 description: Check out my talk "Prolog - a Prologue" given on 2019-01-21.
 

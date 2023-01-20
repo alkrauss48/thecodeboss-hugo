@@ -7,7 +7,7 @@ tags:
 - Front End
 draft: "false"
 description: Check out my talk "Accessibility for the Web" given on 2019-05-29.
-videoUrl: https://www.youtube.com/embed/lVAr0xOVXSE
+videoUrl: https://www.youtube.com/embed/YHiEeSl2C4c
 ---
 In this talk, we'll be talking about designing accessibility for the web –
 from a developer's perspective! Despite what we envision, not every user is
