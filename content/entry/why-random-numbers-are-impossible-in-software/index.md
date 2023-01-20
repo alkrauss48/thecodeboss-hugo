@@ -96,3 +96,22 @@ y.rand
 y.rand
 => 0.2268514535642031
 {{< / highlight >}}
+
+How Can We Get Truly Random Number Generators?
+----------------------------------------------
+
+Despite the limitations of determinism in computer algorithms, getting numbers that represent as close as possible to “truly” random isn’t out of the question.
+
+Imagine flipping a coin or rolling a die ? those results are pretty random, right? While building a hardware system to measure these exact actions would be pretty impractical, engineers have gotten creative; one example of a real-life hardware RNG is a system that measures time between [atmospheric noise](https://en.wikipedia.org/wiki/Noise_(radio)) segments on untuned receivers, and uses that as its basis; this is actually how [random.org](https://www.random.org/) works ? one of the most popular ?true? RNGs available. You can get even deeper when you start using the unpredictability found in the laws of quantum mechanics – such as measuring the radioactive decay of an atom; according to quantum theory, there?s no way to know for sure when radioactive decay will occur, so this is essentially ?pure randomness? from the universe.
+
+Does It Matter – Pseudorandom vs. True Random?
+----------------------------------------------
+
+This is a question that’s completely based on context. If you’re building an application to randomly select who among your coworkers get’s to pick where to go for lunch – then pseudorandom RNGs are perfect. However – if you’re doing anything involving security, such as cryptography or hashing sensitive information, then you absolutely want true randomness to help generate your keys; any number based on a pseudo RNG is 100% solvable by others since there are man-made algorithms involved.
+
+Taking true randomness a step further – it’s not enough to _just_ be random. Imagine if a truly random value was selected from a sample – but more often than not, you end up getting the same result. That type of behavior normally isn’t considered high quality. When we’re talking about using truly random numbers for real use-cases, then you need a high degree of [entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)) – or the measure of unpredictability in your results. Without high entropy, it’s difficult to trust a source that provides random information; that’s why it’s common for these sources to go through an “entropy harvesting” phase that allows enough unpredictable results to be generated, thus ensuring the source is indeed high quality. While entropy is harvested, these sources are considered “blocking,” because they’re rate-limited until the desired degree of entropy has been reached. Because of this – as well as the physical nature of gathering results – true RNGs will always execute slower than pseudo RNGs.
+
+Final Thoughts
+--------------
+
+The concepts behind true random number generation get really deep, and that’s not what I wanted to get into here. I just wanted to give you a brief – but mildly deep – understanding about how RNGs work in software and why they’re not truly random. Now does that mean you should stop using pseudo RNGs? No, absolutely not – they’re practically essential to modern-day applications, even if they’re not truly random. My advice to you is to use pseudo RNGs for all your random number needs until you run into a situation where you genuinely need something truly random – and trust me, you’ll know when that time comes (and when it does come, that probably means you’re working on a pretty neat project).
