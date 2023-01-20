@@ -17,6 +17,7 @@
       prose-hr:border-t-4 prose-hr:border-blue
       prose-hr:w-24 prose-hr:mt-4 prose-hr:mb-6
       prose-pre:my-0 prose-pre:text-base
+      prose-img:max-w-full lg:prose-img:max-w-[75%] xl:prose-img:max-w-[50%] prose-img:mx-auto
     ;
   }
 

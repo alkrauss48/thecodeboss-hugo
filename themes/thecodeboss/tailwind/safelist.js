@@ -8,6 +8,7 @@ const TAXONOMIES = [
   'python',
   'devops',
   'front-end',
+  'prolog',
   'how-things-work',
   'non-tech',
   'javascript',

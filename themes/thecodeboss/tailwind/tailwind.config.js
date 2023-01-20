@@ -67,9 +67,13 @@ module.exports = {
           DEFAULT: '#818187',
           700: '#646469',
         },
+        prolog: {
+          DEFAULT: '#2e65a3',
+          700: '#214875',
+        },
         ["front-end"]: {
-          DEFAULT: '#ff2317',
-          700: '#db0b00',
+          DEFAULT: '#d35836',
+          700: '#a94225',
         },
         ["non-tech"]: {
           DEFAULT: '#e68600',
