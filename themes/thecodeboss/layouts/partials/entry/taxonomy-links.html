@@ -25,7 +25,9 @@
               (printf "text-%s bg-white" ( urlize .Page.Title ))
               (printf "text-white bg-%[1]s hover:text-%[1]s hover:bg-white focus:text-%[1]s focus:bg-white" ( urlize .Page.Title ))
             }}"
-        >{{ .Page.Title | humanize | title }}</a>
+          >{{ .Page.Title | humanize | title }}
+          <sub>({{.Count}})</sub>
+        </a>
       </li>
       {{ end }}
     </ul>
