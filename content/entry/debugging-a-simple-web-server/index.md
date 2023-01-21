@@ -158,7 +158,7 @@ The last neat thing about ngrok is that it still allows you to use your other de
 Overview
 --------
 
-Though there’s many more ways you can test your web server, these are some of my favorite tools that I’ve used lately. Sinatra is a really powerful mini web framework if you’re familiar with ruby, and if you don’t know much about it then feel free to check out my first post on [how to build a web server](https://thesocietea.org/2015/05/building-a-simple-web-server-with-sinatra) using Sinatra.
+Though there’s many more ways you can test your web server, these are some of my favorite tools that I’ve used lately. Sinatra is a really powerful mini web framework if you’re familiar with ruby, and if you don’t know much about it then feel free to check out my first post on [how to build a web server](/2015/05/building-a-simple-web-server-with-sinatra) using Sinatra.
 
 Today we went over:
 
