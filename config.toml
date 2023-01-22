@@ -1,4 +1,3 @@
-baseURL = 'https://thecodeboss.dev'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'thecodeboss'

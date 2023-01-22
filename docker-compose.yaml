@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/prod/Dockerfile
+    # image: alkrauss48/thecodeboss.dev-frontend:latest
+    ports:
+      - "1313:80"
