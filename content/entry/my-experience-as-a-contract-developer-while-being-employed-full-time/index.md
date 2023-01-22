@@ -1,6 +1,6 @@
 ---
 title: "My Experience as a Contract Developer while being Employed"
-date: "2017-05-27"
+date: "2017-04-27"
 categories:
 - Blog
 tags:
