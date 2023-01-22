@@ -5,6 +5,15 @@
       {{.Content}}
     </div>
 
+    <nav>
+      <a href="#entries" class="
+        [ h-0 block ]
+        [ w-full z-50 ]
+        [ bg-blue text-white font-bold ]
+        [ focus:h-auto focus:p-2 focus:mb-2 ]
+      ">Skip filters and go directly to entries</a>
+    </nav>
+
     {{ partial "entry/taxonomy-links.html" (dict
       "current" .
       "title" "Content Type"
@@ -19,7 +28,7 @@
 
     {{ partial "hr-short.html" . }}
 
-    <section class="
+    <section id="entries" class="
       [ mt-8 ]
       [ grid gap-4 grid-cols-2 auto-rows-max ]
       [ md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 ]
