@@ -1,5 +1,6 @@
 {{ $isTags := eq .current.Type "tags" }}
 {{ $tag := urlize .current.Title  }}
+{{ $category := ""  }}
 
 {{/* TODO: Find a simpler way to just get the entry's first tag */}}
 
@@ -9,6 +10,12 @@
         {{ $tag = urlize . }}
       {{ end }}
   {{ end }}
+{{ end }}
+
+{{ with .entry.Params.categories }}
+    {{ range first 1 . }}
+      {{ $category = urlize . }}
+    {{ end }}
 {{ end }}
 
 <a class="
@@ -38,5 +45,9 @@
       [ opacity-0 md:group-hover:opacity-100 md:group-focus:opacity-100 ]
     ">
       {{ .entry.Summary | truncate 65 }}
+    </p>
+    <p title="{{ $category | singularize | humanize }}" class="p-2 text-sm absolute bottom-0 right-0 bg-black/20 text-white">
+      {{ $iconPath := cond (eq $category "blog") "icons/blog.html" "icons/talks.html" }}
+      {{ partial $iconPath (dict "class" "w-5 h-5 inline") }}
     </p>
 </a>

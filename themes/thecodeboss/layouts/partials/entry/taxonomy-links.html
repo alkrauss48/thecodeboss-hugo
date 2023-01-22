@@ -1,4 +1,5 @@
 {{ $currentPage := .current }}
+{{ $withIcons := .withIcons }}
 <section class="mb-8">
   <header class="prose prose-main">
     <h2>{{ .title }}</h2>
@@ -25,7 +26,13 @@
               (printf "text-%s bg-white" ( urlize .Page.Title ))
               (printf "text-white bg-%[1]s hover:text-%[1]s hover:bg-white focus:text-%[1]s focus:bg-white" ( urlize .Page.Title ))
             }}"
-          >{{ .Page.Title | humanize | title }}
+          >
+          {{ $isBlog := eq .Page.Title "Blog" }}
+          {{ with $withIcons }}
+            {{ $iconPath := cond ($isBlog) "icons/blog.html" "icons/talks.html" }}
+            {{ partial $iconPath (dict "class" "w-5 h-5 inline mr-2") }}
+          {{ end }}
+          {{ .Page.Title | humanize | title }}
           <sub>({{.Count}})</sub>
         </a>
       </li>
