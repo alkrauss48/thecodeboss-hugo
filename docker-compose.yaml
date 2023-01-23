@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: docker/prod/Dockerfile
-    # image: alkrauss48/thecodeboss.dev-frontend:latest
+    # image: alkrauss48/thecodeboss-hugo:dev-main
+    platform: linux/amd64
     ports:
       - "1313:80"
