@@ -15,6 +15,6 @@ and of course, vanilla JavaScript. Craft CMS is pretty neat too.
 
 Other than coding, I like brewing a hot cup of tea, making cocktails,
 longboarding, learning new things, and hanging out with my wife
-<a href="https://mothercodesbest.dev" target="_blank">Layla</a>
+<a href="https://laylakrauss.dev" target="_blank">Layla</a>
 and son
 <a href="https://cyruskrauss.com" target="_blank">Cyrus</a>.
