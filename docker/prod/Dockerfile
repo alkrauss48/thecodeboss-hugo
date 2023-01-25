@@ -7,7 +7,7 @@ RUN npm ci
 
 COPY themes/thecodeboss/ .
 
-ENV ENV=production
+ENV NODE_ENV=production
 
 RUN node_modules/.bin/tailwindcss \
   -c tailwind/tailwind.config.js \
@@ -15,7 +15,7 @@ RUN node_modules/.bin/tailwindcss \
   -o ./assets/dist/style.css \
   --minify
 
-RUN ENV=production node_modules/.bin/rollup \
+RUN node_modules/.bin/rollup \
   --config rollup.config.js \
   --configPlugin typescript
 
