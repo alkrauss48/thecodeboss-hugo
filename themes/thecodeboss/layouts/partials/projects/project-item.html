@@ -1,3 +1,5 @@
+{{ $title := .Title }}
+
 <section>
   <div class="container-main">
     <h2 class="text-orange text-3xl font-bold">
@@ -9,7 +11,7 @@
         >
       {{ end }}
 
-      {{ .Title }}
+      {{ $title }}
 
       {{ with .Param "externalUrl" }}
         {{ partial "icons/external-arrow.html" (dict "class" "") }}
@@ -32,7 +34,7 @@
 
       {{ range .Params.images }}
         {{ partial "home/featured-link.html" (dict
-          "imageAlt" "Homepage of Dale Carnegie Chart 30 Day Practice Chart"
+          "imageAlt" (printf "%s - %s" $title .label)
           "imageSrc" .thumb
           "url" .full
           "urlLabel" .label
