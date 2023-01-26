@@ -2,22 +2,31 @@
 FROM node:lts-alpine as node-builder
 WORKDIR /app
 
-COPY themes/thecodeboss/package.json themes/thecodeboss/package-lock.json ./
+COPY themes/thecodeboss/package.json \
+  themes/thecodeboss/package-lock.json \
+  themes/thecodeboss/rollup.config.js \
+  themes/thecodeboss/tailwind/tailwind.config.js \
+  themes/thecodeboss/tailwind/safelist.js \
+  ./
+
 RUN npm ci
 
-COPY themes/thecodeboss/ .
+COPY themes/thecodeboss/assets/js assets/js
 
 ENV NODE_ENV=production
-
-RUN node_modules/.bin/tailwindcss \
-  -c tailwind/tailwind.config.js \
-  -i ./assets/css/main.css \
-  -o ./assets/dist/style.css \
-  --minify
 
 RUN node_modules/.bin/rollup \
   --config rollup.config.js \
   --configPlugin typescript
+
+COPY themes/thecodeboss/assets/css assets/css
+COPY themes/thecodeboss/layouts layouts
+
+RUN node_modules/.bin/tailwindcss \
+  -c ./tailwind.config.js \
+  -i ./assets/css/main.css \
+  -o ./assets/dist/style.css \
+  --minify
 
 # Hugo Builder
 FROM klakegg/hugo:alpine as hugo-builder
