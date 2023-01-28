@@ -88,7 +88,7 @@ const toggleMainMenu = () => {
   stateProxy.isOpen = !stateProxy.isOpen;
 };
 
-export const init = () => {
+export const initMenu = () => {
   const navButton = document.getElementById('responsiveNavToggle');
   navButton.addEventListener('click', toggleMainMenu);
 
@@ -99,10 +99,4 @@ export const init = () => {
 
     stateProxy.isOpen = false;
   });
-};
-
-export default {
-  handleTabIndex,
-  handleAriaAttributes,
-  init,
 };

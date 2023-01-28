@@ -1,10 +1,14 @@
+import {
+  handleTabIndex,
+  handleAriaAttributes,
+  initMenu,
+} from './modules/responsive-menu';
+
 const MD_SCREEN = 768;
 
-import responsiveMenu from './modules/responsive-menu.js';
-
-responsiveMenu.init();
+initMenu();
 
 if (window.screen.width <= MD_SCREEN) {
-  responsiveMenu.handleTabIndex();
-  responsiveMenu.handleAriaAttributes();
+  handleTabIndex();
+  handleAriaAttributes();
 }
