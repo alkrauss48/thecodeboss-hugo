@@ -1,7 +1,7 @@
 import Typed from 'typed.js';
 
 export const init = () => {
-  new Typed('#typed', {
+  const typedConfig = new Typed('#typed', {
     strings: [
       'Tea Enthusiast',
       'Longboarder',
@@ -11,8 +11,10 @@ export const init = () => {
     typeSpeed: 40,
     backSpeed: 20,
   });
-}
+
+  return typedConfig;
+};
 
 export default {
   init,
-}
+};

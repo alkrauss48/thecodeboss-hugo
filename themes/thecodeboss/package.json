@@ -18,6 +18,9 @@
     "url": "https://github.com/alkrauss48/thecodeboss-hugo/issues"
   },
   "homepage": "https://github.com/alkrauss48/thecodeboss-hugo#readme",
+  "dependencies": {
+    "typed.js": "^2.0.12"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
@@ -33,7 +36,6 @@
     "tailwindcss": "^3.2.1",
     "three": "^0.146.0",
     "tslib": "^2.4.1",
-    "typed.js": "^2.0.12",
     "typescript": "^4.9.3"
   }
 }
