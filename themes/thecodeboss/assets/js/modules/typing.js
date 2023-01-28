@@ -1,6 +1,6 @@
 import Typed from 'typed.js';
 
-export const init = () => {
+const init = () => {
   const typedConfig = new Typed('#typed', {
     strings: [
       'Tea Enthusiast',

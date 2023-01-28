@@ -60,7 +60,7 @@ const render = () => {
   renderer.render(scene, camera);
 };
 
-export const init = () => {
+const init = () => {
   const container = document.getElementById('particles');
 
   camera.position.z = 1000;
@@ -98,7 +98,7 @@ export const init = () => {
   window.addEventListener('resize', onWindowResize, false);
 };
 
-export const animate = () => {
+const animate = () => {
   render();
 
   requestAnimationFrame(animate);
