@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/alkrauss48/thecodeboss-hugo#readme",
   "dependencies": {
-    "typed.js": "^2.0.12",
-    "three": "^0.146.0"
+    "three": "^0.146.0",
+    "typed.js": "^2.0.12"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^23.0.2",
@@ -34,6 +34,8 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
     "rollup": "^3.2.5",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard": "^29.0.0",
     "tailwindcss": "^3.2.1",
     "tslib": "^2.4.1",
     "typescript": "^4.9.3"
