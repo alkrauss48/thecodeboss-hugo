@@ -45,11 +45,14 @@ module.exports = [
     `hover:bg-${color}-500`,
     `focus:bg-${color}-500`,
 
-    'pagination',
-    'page-item',
-
   ]).flat(),
 
+  // Hugo plugins/templates
+  'pagination',
+  'page-item',
+  'highlight',
+
+  // ../layouts/partials/entry/entry-list-page.html
   ...TAXONOMIES.map((taxonomy) => [
     `bg-${taxonomy}`,
     `border-${taxonomy}`,

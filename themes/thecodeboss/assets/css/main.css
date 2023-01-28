@@ -54,6 +54,10 @@
   .page-item a {
     @apply text-2xl md:text-3xl md:mx-2 font-bold text-teal hover:text-blue focus:text-blue;
   }
+
+  .highlight > div {
+    @apply overflow-x-scroll my-2 mx-0;
+  }
 }
 
 @layer utilities {
@@ -74,9 +78,4 @@
       text-shadow: none;
     }
   }
-}
-
-.highlight > div {
-  overflow-x: scroll;
-  margin: 0.5rem 0;
 }
