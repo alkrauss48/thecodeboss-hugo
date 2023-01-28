@@ -6,7 +6,7 @@ import terser from '@rollup/plugin-terser';
 
 const output = {
   dir: 'assets/dist',
-  format: 'iife'
+  format: 'iife',
 };
 
 const plugins = [
