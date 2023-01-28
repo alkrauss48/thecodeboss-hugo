@@ -52,7 +52,11 @@
   }
 
   .page-item a {
-      @apply text-2xl md:text-3xl md:mx-2 font-bold text-teal hover:text-blue focus:text-blue;
+    @apply text-2xl md:text-3xl md:mx-2 font-bold text-teal hover:text-blue focus:text-blue;
+  }
+
+  .highlight > div {
+    @apply overflow-x-scroll my-2 mx-0;
   }
 }
 
@@ -61,19 +65,17 @@
     .text-shadow {
       text-shadow: 2px 2px 4px black;
     }
+
     .text-shadow-md {
       text-shadow: 4px 4px 8px black;
     }
+
     .text-shadow-lg {
       text-shadow: 15px 15px 30px black;
     }
+
     .text-shadow-none {
       text-shadow: none;
     }
   }
-}
-
-.highlight > div {
-  overflow-x: scroll;
-  margin: .5rem 0;
 }
