@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "css-watch": "npx tailwindcss -c tailwind/tailwind.config.js -i ./assets/css/main.css -o ./assets/dist/style.css --watch",
+    "lint:css": "npx stylelint assets/css",
+    "lint:js": "npx eslint assets/js",
     "js-watch": "npx rollup --config rollup.config.js --configPlugin typescript -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
