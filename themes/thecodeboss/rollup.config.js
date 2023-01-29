@@ -25,7 +25,7 @@ export default [{
   output,
   plugins,
 }, {
-  input: 'assets/js/home.js',
+  input: 'assets/js/home.ts',
   output,
   plugins,
 }];
