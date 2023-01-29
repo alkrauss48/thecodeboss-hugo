@@ -11,7 +11,7 @@ const PARAMETERS = [
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 3000);
 const scene = new THREE.Scene();
 const renderer = new THREE.WebGLRenderer();
-const materials = [];
+const materials: THREE.PointsMaterial[] = [];
 
 let mouseX = 0;
 let mouseY = 0;
@@ -19,7 +19,7 @@ let mouseY = 0;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
 
-const onDocumentMouseMove = (event) => {
+const onDocumentMouseMove = (event: MouseEvent) => {
   mouseX = event.clientX - windowHalfX;
   mouseY = event.clientY - windowHalfY;
 };
@@ -63,15 +63,21 @@ const render = () => {
 const init = () => {
   const container = document.getElementById('particles');
 
+  if (!container) {
+    return;
+  }
+
   camera.position.z = 1000;
 
   scene.fog = new THREE.FogExp2(0x000000, 0.0007);
 
-  const points = [...Array(20000)].map(() => new THREE.Vector3(
-    Math.random() * 2000 - 1000,
-    Math.random() * 2000 - 1000,
-    Math.random() * 2000 - 1000,
-  ));
+  const points = Array(20000)
+    .fill(null)
+    .map(() => new THREE.Vector3(
+      Math.random() * 2000 - 1000,
+      Math.random() * 2000 - 1000,
+      Math.random() * 2000 - 1000,
+    ));
 
   const geometry = new THREE.BufferGeometry();
   geometry.setFromPoints(points);
