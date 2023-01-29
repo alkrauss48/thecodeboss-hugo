@@ -1,17 +1,10 @@
 import * as THREE from 'three';
 
-const PARAMETERS = [
-  { color: [1, 1, 0.5], size: 5 },
-  { color: [0.95, 1, 0.5], size: 4 },
-  { color: [0.90, 1, 0.5], size: 3 },
-  { color: [0.85, 1, 0.5], size: 2 },
-  { color: [0.80, 1, 0.5], size: 1 },
-];
+import particlesState from '../states/particles.state';
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 3000);
 const scene = new THREE.Scene();
 const renderer = new THREE.WebGLRenderer();
-const materials: THREE.PointsMaterial[] = [];
 
 let mouseX = 0;
 let mouseY = 0;
@@ -35,7 +28,7 @@ const onWindowResize = () => {
 };
 
 const render = () => {
-  const time = Date.now() * 0.00005;
+  const delta = Date.now() * 0.00005;
 
   camera.position.x += (mouseX - camera.position.x) * 0.01;
   camera.position.y += (-mouseY - camera.position.y) * 0.01;
@@ -43,19 +36,13 @@ const render = () => {
   camera.lookAt(scene.position);
 
   for (let i = 0; i < scene.children.length; i += 1) {
-    const object = scene.children[i];
+    const points = (scene.children[i] as THREE.Points);
+    const rotation = delta * (i < 4 ? i + 1 : -(i + 1));
 
-    if (object instanceof THREE.Points) {
-      object.rotation.y = time * (i < 4 ? i + 1 : -(i + 1));
-    }
+    particlesState.setPointsRotation(points, rotation);
   }
 
-  for (let i = 0; i < materials.length; i += 1) {
-    const { color } = PARAMETERS[i];
-
-    const h = ((360 * (color[0] + time)) % 360) / 360;
-    materials[i].color.setHSL(h, color[1], color[2]);
-  }
+  particlesState.setMaterialColor(delta);
 
   renderer.render(scene, camera);
 };
@@ -71,30 +58,8 @@ const init = () => {
 
   scene.fog = new THREE.FogExp2(0x000000, 0.0007);
 
-  const points = Array(20000)
-    .fill(null)
-    .map(() => new THREE.Vector3(
-      Math.random() * 2000 - 1000,
-      Math.random() * 2000 - 1000,
-      Math.random() * 2000 - 1000,
-    ));
-
-  const geometry = new THREE.BufferGeometry();
-  geometry.setFromPoints(points);
-
-  for (let i = 0; i < PARAMETERS.length; i += 1) {
-    const { size } = PARAMETERS[i];
-
-    materials[i] = new THREE.PointsMaterial({ size });
-
-    const particles = new THREE.Points(geometry, materials[i]);
-
-    particles.rotation.x = Math.random() * 6;
-    particles.rotation.y = Math.random() * 6;
-    particles.rotation.z = Math.random() * 6;
-
-    scene.add(particles);
-  }
+  particlesState.setParticles();
+  particlesState.particles.forEach(particles => scene.add(particles));
 
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
