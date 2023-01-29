@@ -2,7 +2,7 @@ import {
   handleTabIndex,
   handleAriaAttributes,
   initMenu,
-} from './modules/responsive-menu';
+} from './ui/responsive-menu';
 
 const MD_SCREEN = 768;
 

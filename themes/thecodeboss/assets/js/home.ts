@@ -1,5 +1,5 @@
-import particles from './modules/particles';
-import typing from './modules/typing';
+import particles from './ui/particles';
+import typing from './ui/typing';
 
 particles.init();
 particles.animate();
