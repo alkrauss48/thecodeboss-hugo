@@ -1,21 +1,15 @@
+import menuState from '../states/responsive-menu.state';
+
 const OPEN = 'Open';
 const CLOSE = 'Close';
 
 const KEY_ESCAPE = 'Escape';
 
-interface NavState {
-  isOpen: boolean;
-}
-
-const state: NavState = {
-  isOpen: false,
-};
-
 export const handleTabIndex = () => {
   document
     .querySelectorAll('[data-handle="nav-link"]')
     .forEach((element) => {
-      (element as HTMLElement).tabIndex = state.isOpen ? 0 : -1;
+      (element as HTMLElement).tabIndex = menuState.isOpen() ? 0 : -1;
     });
 };
 
@@ -26,11 +20,11 @@ export const handleAriaAttributes = () => {
     return;
   }
 
-  navToggle.setAttribute('aria-expanded', state.isOpen.toString());
+  navToggle.setAttribute('aria-expanded', menuState.isOpen().toString());
 };
 
 const setIsOpen = (value: boolean) => {
-  state.isOpen = value;
+  menuState.setIsOpen(value);
 
   const headerBar = document.getElementById('headerBar');
   const label = document.getElementById('responsiveNavToggleText');
@@ -78,7 +72,7 @@ const setIsOpen = (value: boolean) => {
 };
 
 const toggleMainMenu = () => {
-  setIsOpen(!state.isOpen);
+  setIsOpen(!menuState.isOpen());
 };
 
 export const initMenu = () => {
