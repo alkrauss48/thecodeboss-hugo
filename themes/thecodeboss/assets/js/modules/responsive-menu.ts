@@ -3,14 +3,18 @@ const CLOSE = 'Close';
 
 const KEY_ESCAPE = 'Escape';
 
-const state = {
+interface NavState {
+  isOpen: boolean;
+}
+
+const state: NavState = {
   isOpen: false,
 };
 
 export const handleTabIndex = () => {
   document
     .querySelectorAll('[data-handle="nav-link"]')
-    .forEach((element) => {
+    .forEach((element: HTMLElement) => {
       const localElement = element;
 
       localElement.tabIndex = state.isOpen ? 0 : -1;
@@ -20,11 +24,11 @@ export const handleTabIndex = () => {
 export const handleAriaAttributes = () => {
   const navToggle = document.getElementById('responsiveNavToggle');
 
-  navToggle.setAttribute('aria-expanded', state.isOpen);
+  navToggle.setAttribute('aria-expanded', state.isOpen.toString());
 };
 
 const stateHandler = {
-  set(obj, prop, value) {
+  set(obj: NavState, prop: string, value: boolean) {
     const localState = obj;
 
     if (localState[prop] === value) {

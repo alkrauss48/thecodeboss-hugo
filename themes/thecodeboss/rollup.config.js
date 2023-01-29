@@ -2,7 +2,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { threeMinifier } from '@yushijinhun/three-minifier-rollup';
 import terser from '@rollup/plugin-terser';
-// import typescript from '@rollup/plugin-typescript';
+import typescript from '@rollup/plugin-typescript';
 
 const output = {
   dir: 'assets/dist',
@@ -13,7 +13,7 @@ const plugins = [
   commonjs(),
   threeMinifier(), // Seems to shave off 20KB or so
   nodeResolve(),
-  // typescript(),
+  typescript(),
 ];
 
 if (process.env.NODE_ENV === 'production') {
