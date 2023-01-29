@@ -6,7 +6,7 @@
   "scripts": {
     "css-watch": "npx tailwindcss -c tailwind/tailwind.config.js -i ./assets/css/main.css -o ./assets/dist/style.css --watch",
     "lint:css": "npx stylelint assets/css",
-    "lint:js": "npx eslint assets/js",
+    "lint:js": "npx eslint --ext .ts assets/js",
     "js-watch": "npx rollup --config rollup.config.js --configPlugin typescript -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,8 +31,10 @@
     "@rollup/plugin-typescript": "^11.0.0",
     "@tailwindcss/typography": "^0.5.7",
     "@types/three": "^0.146.0",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
     "@yushijinhun/three-minifier-rollup": "^0.4.0",
-    "eslint": "^8.32.0",
+    "eslint": "^8.33.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
     "rollup": "^3.12.0",
@@ -40,6 +42,6 @@
     "stylelint-config-standard": "^29.0.0",
     "tailwindcss": "^3.2.1",
     "tslib": "^2.5.0",
-    "typescript": "^4.9.3"
+    "typescript": "^4.9.4"
   }
 }
