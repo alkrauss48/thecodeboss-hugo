@@ -25,7 +25,7 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install npm dependencies
         run: npm ci --prefer-offline
-      - name: Frontend Lint
+      - name: Run ESLint
         run: npm run lint:js
   stylelint:
     name: Stylelint
@@ -49,11 +49,35 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install npm dependencies
         run: npm ci --prefer-offline
-      - name: Frontend Lint
+      - name: Run Stylelint
         run: npm run lint:css
+  jest:
+    name: Jest Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./themes/thecodeboss
+    steps:
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.node_version }}
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Cache frontend dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install npm dependencies
+        run: npm ci --prefer-offline
+      - name: Run Jest test
+        run: npm run test
   build:
     name: Build Image
-    needs: ['eslint', 'stylelint']
+    needs: ['eslint', 'stylelint', 'jest']
     runs-on: ubuntu-latest
     steps:
       -
