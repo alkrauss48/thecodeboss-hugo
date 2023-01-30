@@ -59,7 +59,7 @@ const init = () => {
   scene.fog = new THREE.FogExp2(0x000000, 0.0007);
 
   particlesState.setParticles();
-  particlesState.particles.forEach(particles => scene.add(particles));
+  particlesState.getParticles().forEach(particles => scene.add(particles));
 
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);

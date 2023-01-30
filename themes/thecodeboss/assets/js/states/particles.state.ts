@@ -19,10 +19,17 @@ const PARTICLE_GROUP_SETTINGS = [
   },
 ];
 
-const _materials: THREE.PointsMaterial[] = [];
-const particles: THREE.Points[] = [];
+let _materials: THREE.PointsMaterial[] = [];
+let _particles: THREE.Points[] = [];
 
-const setParticles = (): THREE.Points[] => {
+const reset = () => {
+  _materials = [];
+  _particles = [];
+};
+
+const getParticles = () => _particles;
+
+const setParticles = () => {
   const basePoints = Array(20000)
     .fill(null)
     .map(() => new THREE.Vector3(
@@ -45,10 +52,8 @@ const setParticles = (): THREE.Points[] => {
     points.rotation.y = Math.random() * 6;
     points.rotation.z = Math.random() * 6;
 
-    particles.push(points);
+    _particles.push(points);
   }
-
-  return particles;
 };
 
 const setPointsRotation = (points: THREE.Points, rotation: number) => {
@@ -65,7 +70,8 @@ const setMaterialColor = (delta: number) => {
 };
 
 export default {
-  particles,
+  getParticles,
+  reset,
   setPointsRotation,
   setParticles,
   setMaterialColor,
