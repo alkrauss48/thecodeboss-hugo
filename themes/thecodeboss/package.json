@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/alkrauss48/thecodeboss-hugo#readme",
   "dependencies": {
-    "three": "^0.146.0",
+    "three": "^0.149.0",
     "typed.js": "^2.0.12"
   },
   "devDependencies": {
