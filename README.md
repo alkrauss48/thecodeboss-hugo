@@ -81,4 +81,8 @@ cd themes/thecodeboss
 
 # Run Jest tests
 npm run test
+
+# Run Playwright tests
+# Note: Hugo server must be running on http://localhost:1313
+npx playwright test
 ```
