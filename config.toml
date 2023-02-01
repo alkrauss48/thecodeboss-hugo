@@ -2,6 +2,7 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'thecodeboss'
 googleAnalytics = 'G-WH3CEERYQX'
+disqusShortname = 'thesocietea'
 
 [permalinks]
   entry = '/:year/:month/:title/'

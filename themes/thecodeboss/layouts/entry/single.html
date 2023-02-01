@@ -17,6 +17,8 @@
     <div class="prose prose-main max-w-none">
     {{.Content}}
     </div>
+
+    {{ template "_internal/disqus.html" . }}
   </div>
 </main>
 {{ end }}
