@@ -6,16 +6,16 @@ updates:
   - package-ecosystem: "npm"
     directory: "/themes/thecodeboss/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
 
   # Maintain dependencies for Docker
   - package-ecosystem: "docker"
     directory: "/docker/prod/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
 
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
