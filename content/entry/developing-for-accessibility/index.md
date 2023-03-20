@@ -8,8 +8,10 @@ tags:
 - Javascript
 draft: "false"
 description: Check out my talk "Developing for Accessibility," given on 2022-10-28 at ThunderPlains Conf in OKC.
+videoUrl: https://www.youtube.com/embed/_nmRCkMShgk
 ---
-This talk was originally given at ThunderPlains Conf 2022 in Oklahoma City, OK.
+This talk was originally given at ThunderPlains Conf 2022 in Oklahoma City, OK,
+and then again on February 21, 2023 at OKC WebDevs.
 
 In this talk, we'll be talking about prioritizing accessibility when developing
 for the web. Despite what we envision, not every user is 100% comfortable as

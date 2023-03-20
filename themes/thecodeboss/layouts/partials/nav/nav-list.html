@@ -11,13 +11,13 @@
     {{ range .Site.Menus.main }}
     <li class="
       [ ml-0 md:ml-6 ]
-      [ border-b-2 border-black md:border-none ]
+      [ text-white border-b-2 border-black md:border-none ]
     ">
       <a
         data-handle="nav-link"
         href="{{ .URL }}"
         class="
-          [ text-white font-bold focus:text-teal hover:text-teal ]
+          [ font-bold focus:text-teal hover:text-teal ]
           [ block md:inline ]
           [ p-3 md:p-0 ]
           {{ if or
