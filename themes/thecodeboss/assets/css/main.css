@@ -47,12 +47,12 @@
     @apply mx-2;
   }
 
-  .page-item.active a {
-    @apply text-blue;
-  }
-
   .page-item a {
     @apply text-2xl md:text-3xl md:mx-2 font-bold text-teal hover:text-blue focus:text-blue;
+  }
+
+  .page-item.active a {
+    @apply text-blue;
   }
 
   .highlight > div {
