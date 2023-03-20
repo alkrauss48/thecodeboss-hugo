@@ -7,6 +7,9 @@ updates:
     directory: "/themes/thecodeboss/"
     schedule:
       interval: "weekly"
+    # Disable version updates for npm dependencies.
+    # NOTE: When Dependabot supports grouped updates, remove this.
+    open-pull-requests-limit: 0
 
   # Maintain dependencies for Docker
   - package-ecosystem: "docker"
