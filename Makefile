@@ -60,7 +60,7 @@ RESET  := $(shell tput -Txterm sgr0)
 
 # targets
 .PHONY: all
-all: sanity-check git help homebrew hugo install node update xcode
+all: sanity-check git help homebrew hugo install node npm update xcode
 
 sanity-check:  ## output environment variables
 	@echo "Checking environment..."
@@ -179,7 +179,11 @@ node: ## install node
 		echo "node already installed."; \
 	fi
 
-install: sanity-check update xcode homebrew git python pip hugo node ## install all dependencies
+npm: ## install node modules
+	@echo installing node modules...; \
+	cd themes/thecodeboss && npm install
+
+install: sanity-check update xcode homebrew git python pip hugo node npm ## install all dependencies
 
 help: ## show this help
 	@echo ''
