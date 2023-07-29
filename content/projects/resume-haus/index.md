@@ -21,4 +21,4 @@ images:
 ---
 **Project Type**: Interactive web application
 
-**Tools Used**: Craft CMS, PHP, HTML5UP, Docker, CI/CD, Kubernetes
+**Tools Used**: Craft CMS, PHP, Docker, CI/CD, Kubernetes
