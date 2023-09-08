@@ -9,12 +9,13 @@ draft: "false"
 description: I migrated my custom portfolio site from Wordpress to Hugo. And the world is better because of it.
 images:
 - https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/entries/designing-with-developers-in-mind/designing-with-developers-in-mind-og.jpg
+videoUrl: https://www.youtube.com/embed/5NUreLYJjT0?si=RX71yYUil3RG4ovZ
 ---
-
-## [Check out the slides!](https://simpleslides.dev/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Fsa3JhdXNzNDgvdGFsa3MvbWFzdGVyL2Rlc2lnbmluZy13aXRoLWRldmVsb3BlcnMtaW4tbWluZC9wcmVzZW50YXRpb24ubWQ=)
 
 This 40 min talk was originally given on August 31, 2023 at [OKC Design + Tech](https://www.meetup.com/okc-design-and-tech/events/295364191/),
 hosted at [Clevyr](https://clevyr.com) in Oklahoma City, OK.
+
+[Check out the slides!](https://simpleslides.dev/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Fsa3JhdXNzNDgvdGFsa3MvbWFzdGVyL2Rlc2lnbmluZy13aXRoLWRldmVsb3BlcnMtaW4tbWluZC9wcmVzZW50YXRpb24ubWQ=)
 
 ---
 
