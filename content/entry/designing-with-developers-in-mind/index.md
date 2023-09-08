@@ -6,7 +6,7 @@ categories:
 tags:
 - Non-Tech
 draft: "false"
-description: I migrated my custom portfolio site from Wordpress to Hugo. And the world is better because of it.
+description: Designers and developers collaborate more today than they ever have, and this talk aims to help make that collaboration as smooth as butter.
 images:
 - https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/entries/designing-with-developers-in-mind/designing-with-developers-in-mind-og.jpg
 videoUrl: https://www.youtube.com/embed/5NUreLYJjT0?si=RX71yYUil3RG4ovZ
