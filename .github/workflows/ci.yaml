@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: ${{ env.node_version }}
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Cache frontend dependencies
         uses: actions/cache@v3
         with:
@@ -39,7 +39,7 @@ jobs:
         with:
           node-version: ${{ env.node_version }}
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Cache frontend dependencies
         uses: actions/cache@v3
         with:
@@ -63,7 +63,7 @@ jobs:
         with:
           node-version: ${{ env.node_version }}
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Cache frontend dependencies
         uses: actions/cache@v3
         with:
@@ -82,7 +82,7 @@ jobs:
     steps:
       -
         name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       -
         name: Docker meta
         id: meta
