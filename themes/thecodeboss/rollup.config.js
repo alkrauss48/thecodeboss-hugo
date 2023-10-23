@@ -28,4 +28,8 @@ export default [{
   input: 'assets/js/home.ts',
   output,
   plugins,
+}, {
+  input: 'assets/js/home-three.ts',
+  output,
+  plugins,
 }];

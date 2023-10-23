@@ -1,7 +1,7 @@
 {{ define "main" }}
   <main>
     <section id="particles" data-title="3D Background" class="
-      [ bg-black w-full h-full ]
+      [ bg-black bg-particles w-full h-full ]
       [ fixed left-0 top-0 -z-10 ]
       "
     ></section>
@@ -20,4 +20,7 @@
 
   {{ $homeJs := resources.Get "dist/home.js" }}
   <script type="text/javascript" src="{{ $homeJs.Permalink }}"></script>
+
+  {{ $homeThreeJs := resources.Get "dist/home-three.js" }}
+  <script type="text/javascript" src="{{ $homeThreeJs.Permalink }}"></script>
 {{ end }}

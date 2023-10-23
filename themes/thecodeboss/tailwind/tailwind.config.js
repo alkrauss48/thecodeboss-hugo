@@ -6,6 +6,9 @@ module.exports = {
   safelist,
   theme: {
     extend: {
+      backgroundImage: {
+        'particles': "url('/images/particles-bg.jpg')",
+      },
       borderWidth: {
         '20': '20px',
         '10': '10px',
