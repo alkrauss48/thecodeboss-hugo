@@ -11,7 +11,7 @@ jobs:
         working-directory: ./themes/thecodeboss
     steps:
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.node_version }}
       - name: Checkout code
@@ -35,7 +35,7 @@ jobs:
         working-directory: ./themes/thecodeboss
     steps:
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.node_version }}
       - name: Checkout code
@@ -59,7 +59,7 @@ jobs:
         working-directory: ./themes/thecodeboss
     steps:
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.node_version }}
       - name: Checkout code
