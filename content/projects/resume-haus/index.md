@@ -19,6 +19,9 @@ images:
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/resume-haus/full/resume-big-2.jpg
     label: Skill Bars
 ---
+Resume Haus is a platform that allows you to create and share a resume that you can be proud of.
+Check out the [GitHub](https://github.com/alkrauss48/resume-haus-v2)!
+
 **Project Type**: Interactive web application
 
 **Tools Used**: Craft CMS, PHP, Docker, CI/CD, Kubernetes
