@@ -1,6 +1,5 @@
 ---
 title: Edmond Public Schools
-externalUrl: https://edmondschools.net
 date: "2017-05-25"
 draft: "false"
 weight: 21
@@ -30,6 +29,10 @@ images:
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/full/eps-responsive.jpg
     label: Mobile Responsive
 ---
+Edmond Public Schools represents 27+ schools in the city of Edmond, OK. Each
+site had a similar theme that incorporated each school's unique branding. This
+site was live from 2015 - 2023.
+
 **Project Type**: 27 Websites
 
 **Tools Used**: Wordpress Multisite, HTML, Sass, JS, jQuery, Browserify, Gulp.js
