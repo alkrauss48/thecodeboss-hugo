@@ -4,7 +4,7 @@
 
 @layer components {
   .container-main {
-    @apply container mx-auto px-4;
+    @apply container mx-auto px-4 max-w-7xl;
   }
 
   .prose-main {
