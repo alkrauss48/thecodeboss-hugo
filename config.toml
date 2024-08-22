@@ -26,20 +26,15 @@ googleAnalytics = 'G-WH3CEERYQX'
   url = 'https://github.com/alkrauss48'
   weight = 1
 [[menu.social]]
-  identifier = 'meetup'
-  name = 'OKC WebDevs Meetup'
-  url = 'https://www.meetup.com/okcwebdevs/'
-  weight = 2
-[[menu.social]]
   identifier = 'linked-in'
   name = 'My LinkedIn'
   url = 'https://www.linkedin.com/in/alkrauss48/'
-  weight = 3
+  weight = 2
 [[menu.social]]
-  identifier = 'js-fiddle'
-  name = 'My JS Fiddle'
-  url = 'https://jsfiddle.net/user/thecodeboss/fiddles/'
-  weight = 4
+  identifier = 'meetup'
+  name = 'OKC WebDevs Meetup'
+  url = 'https://www.meetup.com/okcwebdevs/'
+  weight = 3
 
 [markup]
   [markup.highlight]
