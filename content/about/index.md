@@ -63,5 +63,5 @@ comes to traveling the globe, playing tennis, bingewatching TV series, and
 pretty much everything in between. She’s the sweetest, most thoughtful and
 honest person I know. I can’t imagine a life without her. I love her, and
 she’s an incredibly talented dietitian too! I also have two beautiful sons,
-[Cyrus](https://cyruskrauss.com) and Lucas, who keep me busy
+[Cyrus](https://cyruskrauss.com) and [Lucas](https://lucaskrauss.dev), who keep me busy
 and full of love in ways that I could only ever have dreamed about.
