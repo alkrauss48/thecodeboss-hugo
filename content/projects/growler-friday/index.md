@@ -2,7 +2,7 @@
 title: Growler Friday
 externalUrl: https://growlerfriday.com
 date: "2016-06-24"
-draft: "false"
+draft: "true"
 weight: 30
 images:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/growler-friday/thumbnail/th-gf-1.jpg

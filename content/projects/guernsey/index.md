@@ -1,6 +1,5 @@
 ---
 title: Guernsey
-externalUrl: https://guernsey.us
 date: "2016-10-01"
 draft: "false"
 weight: 23
