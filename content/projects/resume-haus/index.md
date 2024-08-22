@@ -1,9 +1,7 @@
 ---
 title: Resume Haus
-externalUrl: https://resumeha.us
 date: "2015-06-24"
 draft: "false"
-menu: featured
 weight: 20
 images:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/resume-haus/thumbnail/resume-haus-home-th.jpg
