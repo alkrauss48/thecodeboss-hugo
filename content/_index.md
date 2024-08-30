@@ -9,14 +9,14 @@ draft: "false"
 Hi, I’m from Oklahoma City, OK, and I’m a technical lead at
 <a href="https://clevyr.com" target="_blank">Clevyr</a> with well over a decade
 of experience as a developer. I'm incredibly involved in
-<a href="https://techlahoma.org" target="_blank">my tech community</a>
-with well over a decade , and even organize one of OKC's
+my tech community,
+and even organize one of OKC's
 <a href="https://www.meetup.com/OKCWebDevs/" target="_blank">largest developer meetup groups</a>.
 
 My favorite projects are those that are workflow-heavy involving Laravel,
-Flutter, Go, Ruby, Python, SQL, Swift, Docker, CI/CD, and more. Then, I always
+SQL, Flutter, Ruby, Node, Go, Swift, Docker, CI/CD, and more. Then, I always
 enjoy building a solid, responsive front-end using tools like Tailwind CSS, Vue,
-and of course, vanilla JavaScript. Craft CMS is pretty neat too.
+and of course, vanilla JavaScript.
 
 Other than coding, I like brewing a hot cup of tea, making cocktails,
 longboarding, and hanging out with my wife

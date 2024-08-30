@@ -22,7 +22,7 @@ images:
 Lucas Hints is an iOS app that helps you create fun, memorable stories with
 friends and family by kickstarting your creativity.
 I built it for, and named it after, my son Lucas. Check out
-the GitHub repo for the [iOS app](https://github.com/alkrauss48/lucas-hints)!
+the [GitHub repo](https://github.com/alkrauss48/lucas-hints) for the iOS app!
 
 **Project Type**: iOS Mobile App w/ iMessage App Extension
 
