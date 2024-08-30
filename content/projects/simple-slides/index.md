@@ -6,7 +6,7 @@ draft: "false"
 menu: featured
 weight: 10
 images:
-  - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/simple-slides/thumbnail/simple-slides-1-th.jpg
+  - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/simple-slides/thumbnail/simple-slides-9-th.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/simple-slides/full/simple-slides-1-full.png
     label: Site homepage
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/simple-slides/thumbnail/simple-slides-2-th.jpg
