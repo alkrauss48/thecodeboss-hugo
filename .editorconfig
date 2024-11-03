@@ -14,5 +14,9 @@ max_line_length = 100
 [*.md]
 trim_trailing_whitespace = false
 
+[*.{bash,go,sh,zsh,justfile,Makefile}]
+indent_style = tab
+indent_size = 4
+
 [layouts/shortcodes/*.html]
 insert_final_newline = false
