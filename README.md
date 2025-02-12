@@ -64,6 +64,15 @@ hugo server --disableFastRender
 # Navigate to http://localhost:1313
 ```
 
+### Build and start via bootstrap
+```bash
+# start bootstrap shell script
+./bootstap.sh
+
+# quit (sigint)
+# ctrl-c
+```
+
 ## Linting
 ```sh
 cd themes/thecodeboss
