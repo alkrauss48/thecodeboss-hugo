@@ -35,6 +35,11 @@ nvm use # (optional) only if you have NVM installed
 npm install
 ```
 
+### Alternate install of dependencies via Makefile
+```bash
+make install  # hugo|node|npm|install
+```
+
 ## To Run
 
 You will need to run 3 continuous processes:
