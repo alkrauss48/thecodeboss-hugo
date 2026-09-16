@@ -44,7 +44,7 @@
       [ md:group-hover:-translate-y-4 md:group-focus:-translate-y-4 ]
       [ opacity-0 md:group-hover:opacity-100 md:group-focus:opacity-100 ]
     ">
-      {{ .entry.Summary | truncate 65 }}
+      {{ .entry.Summary | plainify | truncate 65 }}
     </p>
     <p title="{{ $category | singularize | humanize }}" class="p-2 text-sm absolute bottom-0 right-0 bg-black/20 text-white">
       {{ $iconPath := cond (eq $category "blog") "icons/blog.html" "icons/talks.html" }}

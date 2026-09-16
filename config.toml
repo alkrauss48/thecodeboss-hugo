@@ -1,4 +1,4 @@
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'My New Hugo Site'
 theme = 'thecodeboss'
 googleAnalytics = 'G-WH3CEERYQX'
