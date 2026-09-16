@@ -2,6 +2,13 @@
 
 @plugin "@tailwindcss/typography";
 
+/* Tailwind's own list is `theme, base, components, utilities`. Naming a layer
+   after that import appends it, so `site` outranks every utility. The classes
+   below are stacked on the same element as `prose` -- which the typography
+   plugin emits into `utilities` -- and a lower layer can never win no matter
+   how specific the selector is. */
+@layer site;
+
 /* Hugo writes hugo_stats.json at the project root, but it is gitignored and
    Tailwind skips gitignored paths -- so it must be sourced explicitly. */
 @source "../../hugo_stats.json";
@@ -91,16 +98,22 @@
 /* Emitted by Hugo's embedded pagination template and Chroma */
 @source inline("{pagination,page-item,highlight}");
 
-@layer components {
+@layer site {
   .container-main {
     @apply container mx-auto px-4 max-w-7xl;
+  }
+
+  /* home/portfolio.html wants its row flush to the screen edge on mobile.
+     It cannot just add `px-0`, because a utility cannot outrank this layer. */
+  .container-main-flush {
+    @apply container mx-auto px-0 md:px-4 max-w-7xl;
   }
 
   .prose-main {
     @apply
       prose-h2:text-blue
       prose-a:no-underline
-      prose-a:text-teal hover:prose-a:text-blue focus:prose-a:text-blue
+      prose-a:text-teal prose-a:hover:text-blue prose-a:focus:text-blue
       prose-a:font-bold
       prose-p:leading-loose
       prose-hr:border-t-4 prose-hr:border-blue
@@ -109,17 +122,22 @@
       prose-img:max-w-full lg:prose-img:max-w-[75%] xl:prose-img:max-w-[50%] prose-img:mx-auto;
   }
 
+  /* The md: breakpoint is folded in here; it used to be a separate
+     `md:prose-home-md` class, which cannot work any more -- it would sit in
+     `utilities` and lose to `.prose-home` in this layer. */
   .prose-home {
     @apply
-      prose-h2:text-teal prose-h2:text-center
-      prose-a:no-underline hover:prose-a:underline focus:prose-a:underline
-      prose-a:text-orange hover:prose-a:text-white focus:prose-a:text-white
+      prose-h2:text-teal prose-h2:text-center md:prose-h2:text-left
+      prose-a:no-underline prose-a:hover:underline prose-a:focus:underline
+      prose-a:text-orange prose-a:hover:text-white prose-a:focus:text-white
       prose-a:font-bold
       prose-p:leading-loose
       prose-p:text-white
       prose-p:font-light;
   }
+}
 
+@layer components {
   .pagination {
     @apply flex justify-center mt-12;
   }
@@ -143,10 +161,6 @@
 
 /* v4 generates responsive/state variants for @utility automatically,
    which is what the removed `@variants responsive` block used to do. */
-@utility prose-home-md {
-  @apply prose-h2:text-left;
-}
-
 @utility text-shadow {
   text-shadow: 2px 2px 4px black;
 }

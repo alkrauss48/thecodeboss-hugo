@@ -61,6 +61,23 @@ Two image fields, and they are not interchangeable:
 Images are hosted on a DigitalOcean Spaces CDN, not as page-bundle resources,
 so Hugo image processing (`.Resize`, `.Fill`) is not available for them.
 
+## CSS layers (read this before touching main.css)
+
+Tailwind v4 emits the layers `theme, base, components, utilities`, and the
+typography plugin puts `prose` in **utilities** -- so a `@layer components`
+rule can never override it, no matter how specific. `main.css` therefore
+declares a `site` layer after the Tailwind import, and everything stacked on
+the same element as `prose` (`prose-main`, `prose-home`, `container-main`)
+lives there.
+
+The cost is that plain utilities can no longer override those classes either.
+That is why `container-main-flush` exists: `container-main px-0` would not
+have worked. If you need a one-off variation of a `site`-layer class, add a
+sibling class in `main.css` rather than a utility in the template.
+
+`@utility` is not a way around this -- Tailwind sorts custom utilities by
+property, and they can land before `prose` inside the utilities layer.
+
 ## Adding a taxonomy term (read this before adding a tag)
 
 Tag and category names are rendered as Tailwind color classes
