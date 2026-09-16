@@ -5,7 +5,7 @@ googleAnalytics = 'G-WH3CEERYQX'
 enableRobotsTXT = true
 
 [permalinks]
-  entry = '/:year/:month/:title/'
+  entry = '/:year/:month/:slug/'
 
 [params]
   dateFormat = "02 Jan 2006"
