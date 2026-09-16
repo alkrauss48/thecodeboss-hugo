@@ -10,9 +10,9 @@
       <li class="inline-block">
         <a
           href="{{
-              cond (eq $currentPage.Page.Permalink .Page.Permalink)
+              cond (eq $currentPage.Page.RelPermalink .Page.RelPermalink)
               "/content#type"
-              (printf "%s#type" .Page.Permalink)
+              (printf "%s#type" .Page.RelPermalink)
             }}"
           class="
             inline-block
@@ -22,7 +22,7 @@
             border-4
             border-{{ .Page.Title | urlize }}
             {{
-              cond (eq $currentPage.Page.Permalink .Page.Permalink)
+              cond (eq $currentPage.Page.RelPermalink .Page.RelPermalink)
               (printf "text-%s bg-white" ( urlize .Page.Title ))
               (printf "text-white bg-%[1]s hover:text-%[1]s hover:bg-white focus:text-%[1]s focus:bg-white" ( urlize .Page.Title ))
             }}"
