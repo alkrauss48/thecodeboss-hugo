@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<main class="bg-white py-12">
+  <div class="container-main mb-12">
+    <div class="prose prose-main max-w-none">
+      {{.Content}}
+    </div>
+  </div>
+
+  {{ $paginator := .Paginate .Pages 5 }}
+
+  {{ range $paginator.Pages }}
+    {{ partial "projects/project-item.html" . }}
+  {{ end }}
+
+  {{ partial "pagination.html" . }}
+</main>
+{{ end }}

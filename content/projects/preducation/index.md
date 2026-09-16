@@ -4,7 +4,7 @@ externalUrl: https://preducationproject.com
 date: "2023-07-28"
 draft: "false"
 weight: 22
-images:
+gallery:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/preducation/thumbnail/1-icon.jpeg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/preducation/full/1-icon.jpeg
     label: App Icon

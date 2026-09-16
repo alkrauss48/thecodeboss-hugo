@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <main>
+    <section id="particles" data-title="3D Background" class="
+      [ bg-black bg-particles w-full h-full ]
+      [ fixed left-0 top-0 -z-10 ]
+      "
+    ></section>
+
+    {{- partial "home/header.html" . -}}
+
+    {{- partial "home/community.html" . -}}
+
+    {{- partial "home/about.html" . -}}
+
+    {{- partial "home/portfolio.html" . -}}
+
+    {{- partial "home/featured.html" . -}}
+
+  </main>
+
+  {{ partial "js.html" (dict "src" "js/home.ts") }}
+  {{ partial "js.html" (dict "src" "js/home-three.ts") }}
+{{ end }}

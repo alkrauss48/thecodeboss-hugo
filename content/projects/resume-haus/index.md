@@ -3,7 +3,7 @@ title: Resume Haus
 date: "2015-06-24"
 draft: "false"
 weight: 20
-images:
+gallery:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/resume-haus/thumbnail/resume-haus-home-th.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/resume-haus/full/resume-haus-home.jpg
     label: Homepage

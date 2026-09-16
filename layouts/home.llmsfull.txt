@@ -1,0 +1,21 @@
+{{- /* /llms-full.txt -- the site index plus the full text of every page. */ -}}
+# {{ site.Title }}
+
+> {{ site.Params.description }}
+
+{{ range $section := slice "entry" "projects" -}}
+{{ with site.GetPage $section }}
+{{ range .RegularPagesRecursive.ByDate.Reverse }}
+---
+
+# {{ .Title }}
+
+Source: {{ .Permalink }}
+{{ with .Date }}Date: {{ .Format "2006-01-02" }}{{ end }}
+{{ with .Params.categories }}Categories: {{ delimit . ", " }}{{ end }}
+{{ with .Params.tags }}Tags: {{ delimit . ", " }}{{ end }}
+
+{{ .RawContent }}
+{{ end }}
+{{- end }}
+{{- end -}}

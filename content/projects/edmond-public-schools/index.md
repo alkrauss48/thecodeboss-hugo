@@ -3,7 +3,7 @@ title: Edmond Public Schools
 date: "2017-05-25"
 draft: "false"
 weight: 21
-images:
+gallery:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/thumbnail/eps-1-th.jpeg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/edmond-public-schools/full/eps-1-large.jpg
     label: Homepage

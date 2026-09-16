@@ -1,0 +1,45 @@
+{
+  "name": "thecodeboss-hugo",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "thecodeboss.dev - Aaron Krauss's personal site, built with Hugo",
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo --minify --gc",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:types",
+    "lint:js": "eslint assets/js test e2e",
+    "lint:css": "stylelint assets/css",
+    "lint:types": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alkrauss48/thecodeboss-hugo.git"
+  },
+  "author": "Aaron Krauss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alkrauss48/thecodeboss-hugo/issues"
+  },
+  "homepage": "https://github.com/alkrauss48/thecodeboss-hugo#readme",
+  "dependencies": {
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
+    "@tailwindcss/cli": "^4.3.3",
+    "@tailwindcss/typography": "^0.5.20",
+    "@types/node": "^22.20.3",
+    "@types/three": "^0.186.0",
+    "eslint": "^10.10.0",
+    "stylelint": "^17.15.0",
+    "stylelint-config-standard": "^40.0.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.70.0",
+    "vitest": "^5.0.1"
+  }
+}

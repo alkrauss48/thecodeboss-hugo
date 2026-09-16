@@ -1,0 +1,27 @@
+{{- /*
+  Builds and emits a <script> tag for one TypeScript entry point.
+
+  @param {string} src Path of the entry point, relative to assets/ (e.g. "js/main.ts").
+
+  @example {{ partial "js.html" (dict "src" "js/main.ts") }}
+*/ -}}
+{{- $src := .src -}}
+{{- with resources.Get $src -}}
+  {{- $opts := dict
+    "minify" (not hugo.IsDevelopment)
+    "sourceMap" (cond hugo.IsDevelopment "linked" "")
+    "target" "es2022"
+    "format" "iife"
+  -}}
+  {{- with . | js.Build $opts -}}
+    {{- if hugo.IsDevelopment -}}
+      <script defer src="{{ .RelPermalink }}"></script>
+    {{- else -}}
+      {{- with . | fingerprint -}}
+        <script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- errorf "partial js.html: asset %q not found" $src -}}
+{{- end -}}

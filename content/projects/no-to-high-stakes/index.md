@@ -3,7 +3,7 @@ title: OEA - No to High Stakes
 date: "2015-02-01"
 draft: "false"
 weight: 25
-images:
+gallery:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/no-to-high-stakes/thumbnail/oea_th_4.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/no-to-high-stakes/full/oea_big_4.jpg
     label: Homepage Action

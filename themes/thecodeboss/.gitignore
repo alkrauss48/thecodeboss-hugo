@@ -1,5 +1,0 @@
-node_modules/
-assets/dist
-/test-results/
-/playwright-report/
-/playwright/.cache/

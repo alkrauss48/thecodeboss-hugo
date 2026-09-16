@@ -1,0 +1,24 @@
+{{- /*
+  Renders the social menu as an icon list. Used by the site footer and the
+  home hero, which differ only in icon size and spacing.
+
+  @param {string} itemClass Classes for each <li>.
+  @param {string} linkWidth Tailwind width utility for each icon link.
+
+  @example {{ partial "nav/social-list.html" (dict "itemClass" "mx-8" "linkWidth" "w-8") }}
+*/ -}}
+<ul class="flex items-end justify-center">
+  {{- range site.Menus.social }}
+  <li class="{{ $.itemClass }}">
+    <a
+      class="[ {{ $.linkWidth }} block ][ text-white hover:text-teal focus:text-teal ]"
+      target="_blank"
+      rel="noopener"
+      title="{{ .Name }}"
+      href="{{ .URL }}"
+      >
+      {{ partial (printf "icons/%s.html" .Identifier) (dict "class" "") }}
+    </a>
+  </li>
+  {{- end }}
+</ul>

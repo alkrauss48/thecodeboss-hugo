@@ -3,7 +3,7 @@ title: Guess Match Trivia
 date: "2019-02-01"
 draft: "false"
 weight: 24
-images:
+gallery:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/guess-match-trivia/thumbnail/th-gmt-1.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/guess-match-trivia/full/gmt-1.jpg
     label: Dashboard
