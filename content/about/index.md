@@ -1,6 +1,6 @@
 ---
 title: About
-date: "2022–11–03"
+date: "2022-11-03"
 type: page
 menu: main
 headerSrc: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/pages/about/scissortail-bridge.jpg

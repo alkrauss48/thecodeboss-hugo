@@ -5,7 +5,7 @@ date: "2023-07-28"
 draft: "false"
 menu: featured
 weight: 10
-images:
+gallery:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/simple-slides/thumbnail/simple-slides-9-th.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/simple-slides/full/simple-slides-1-full.png
     label: Site homepage

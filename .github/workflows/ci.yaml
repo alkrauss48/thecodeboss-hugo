@@ -1,115 +1,108 @@
 name: ci
 
-on: push
+on:
+  push:
+  pull_request:
+
+env:
+  HUGO_VERSION: 0.166.0
 
 jobs:
-  eslint:
-    name: ESLint
+  lint-and-test:
+    name: Lint, Test & Build
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./themes/thecodeboss
     steps:
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.node_version }}
       - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Cache frontend dependencies
-        uses: actions/cache@v3
+        uses: actions/checkout@v5
+
+      # setup-node must run *after* checkout, or node-version-file
+      # cannot find .nvmrc.
+      - name: Install Node.js
+        uses: actions/setup-node@v6
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version-file: .nvmrc
+          cache: npm
+
       - name: Install npm dependencies
         run: npm ci --prefer-offline
-      - name: Run ESLint
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: ESLint
         run: npm run lint:js
-  stylelint:
-    name: Stylelint
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./themes/thecodeboss
-    steps:
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.node_version }}
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Cache frontend dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: Install npm dependencies
-        run: npm ci --prefer-offline
-      - name: Run Stylelint
+
+      - name: Stylelint
         run: npm run lint:css
-  jest:
-    name: Jest Tests
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./themes/thecodeboss
-    steps:
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+
+      - name: Typecheck
+        run: npm run lint:types
+
+      - name: Unit tests
+        run: npm test
+
+      # The site build was never verified in CI before; a broken template
+      # or a missing Tailwind class only showed up at deploy time.
+      - name: Build site
+        run: npm run build
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: End-to-end tests
+        run: npx playwright test --project=chromium
+
+      - name: Upload Playwright report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
         with:
-          node-version: ${{ env.node_version }}
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Cache frontend dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: Install npm dependencies
-        run: npm ci --prefer-offline
-      - name: Run Jest test
-        run: npm run test
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
+
   build:
     name: Build Image
-    needs: ['eslint', 'stylelint', 'jest']
+    needs: [lint-and-test]
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Checkout
-        uses: actions/checkout@v4
-      -
-        name: Docker meta
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
         with:
           images: alkrauss48/thecodeboss-hugo
           tags: |
             type=ref,prefix=dev-,event=branch
+            type=ref,prefix=pr-,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}
             type=semver,pattern={{major}}.{{minor}}
-      -
-        name: Set up Docker Buildx
+
+      - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-      -
-        name: Login to DockerHub
+
+      # Pull requests only verify that the image builds, so there is
+      # nothing to log in for.
+      - name: Login to DockerHub
+        if: github.event_name != 'pull_request'
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      -
-        name: Build and push
+
+      - name: Build and push
         id: docker_build
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           file: docker/prod/Dockerfile
-          push: true
+          push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

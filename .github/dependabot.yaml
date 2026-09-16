@@ -1,23 +1,23 @@
-# Basic set up for three package managers
-
 version: 2
 updates:
-  # Maintain dependencies for npm
   - package-ecosystem: "npm"
-    directory: "/themes/thecodeboss/"
+    directory: "/"
     schedule:
       interval: "weekly"
-    # Disable version updates for npm dependencies.
-    # NOTE: When Dependabot supports grouped updates, remove this.
-    open-pull-requests-limit: 0
+    groups:
+      # Grouped updates are supported now, so npm updates no longer need
+      # to be disabled via open-pull-requests-limit: 0.
+      minor-and-patch:
+        update-types: ["minor", "patch"]
+      dev-major:
+        dependency-type: "development"
+        update-types: ["major"]
 
-  # Maintain dependencies for Docker
   - package-ecosystem: "docker"
     directory: "/docker/prod/"
     schedule:
       interval: "weekly"
 
-  # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

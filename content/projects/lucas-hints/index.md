@@ -5,7 +5,7 @@ date: "2024-08-22"
 draft: "false"
 menu: featured
 weight: 20
-images:
+gallery:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/lucas-hints/thumbnails/lucas-hints-th.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/lucas-hints/full/lucas-hints.jpeg
     label: App Icon

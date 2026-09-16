@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<main class="bg-white py-12">
+  <div class="container-main prose prose-main">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ with .Params.externalUrl }}
+      <p><a href="{{ . }}" target="_blank" rel="noopener">Visit the project &rarr;</a></p>
+    {{ end }}
+  </div>
+</main>
+{{ end }}

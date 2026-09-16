@@ -4,7 +4,7 @@ externalUrl: https://apps.apple.com/app/id1547816437
 date: "2022-02-24"
 draft: "false"
 weight: 23
-images:
+gallery:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/spiro/thumbnail/spiro-4-th.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/spiro/full/spiro-4.png
     label: App Icon

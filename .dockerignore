@@ -1,0 +1,10 @@
+.git
+.github
+node_modules
+public
+resources
+test-results
+playwright-report
+playwright/.cache
+.hugo_build.lock
+hugo_stats.json

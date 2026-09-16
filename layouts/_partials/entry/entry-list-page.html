@@ -1,0 +1,52 @@
+{{ partial "page-header.html" . }}
+<main id="main" class="bg-white py-12">
+  <div class="container-main">
+    <div class="prose prose-main max-w-none">
+      <p>
+        Here are all of the talks I've given, as well as the blog posts I've written.
+        I've found that writing and/or giving talks is one of the best ways
+        for me to learn something new, and then I get to teach others in the
+        process!
+      </p>
+    </div>
+
+    <nav id="type" class="pt-12">
+      <a href="#entries" class="
+        [ h-0 block ]
+        [ w-full z-50 ]
+        [ bg-blue text-white font-bold ]
+        [ focus:h-auto focus:p-2 focus:mb-2 ]
+      ">Skip filters and go directly to entries</a>
+    </nav>
+
+    {{ partial "entry/taxonomy-links.html" (dict
+      "current" .
+      "title" "Content Type"
+      "taxonomies" site.Taxonomies.categories
+      "withIcons" true
+    ) }}
+    {{ partial "entry/taxonomy-links.html" (dict
+      "current" .
+      "title" "Tags"
+      "taxonomies" site.Taxonomies.tags
+    ) }}
+
+    {{ partial "hr-short.html" . }}
+
+    <section id="entries" class="
+      [ mt-8 ]
+      [ grid gap-4 grid-cols-2 auto-rows-max ]
+      [ md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ]
+    ">
+      {{ $currentPage := . }}
+      {{ range (.Paginator 12).Pages }}
+        {{ partial "entry/entry-card.html" (dict
+          "current" $currentPage
+          "entry" .
+        ) }}
+      {{ end }}
+    </section>
+
+      {{ partial "pagination.html" . }}
+  </div>
+</main>

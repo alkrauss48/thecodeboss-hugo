@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+/* Tailwind's own list is `theme, base, components, utilities`. Naming a layer
+   after that import appends it, so `site` outranks every utility. The classes
+   below are stacked on the same element as `prose` -- which the typography
+   plugin emits into `utilities` -- and a lower layer can never win no matter
+   how specific the selector is. */
+@layer site;
+
+/* Hugo writes hugo_stats.json at the project root, but it is gitignored and
+   Tailwind skips gitignored paths -- so it must be sourced explicitly. */
+@source "../../hugo_stats.json";
+
+@theme {
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Global palette */
+  --color-blue-200: #e9f1fd;
+  --color-blue-500: #4790ef;
+  --color-blue: #1470e7;
+  --color-blue-700: #1265d0;
+
+  --color-dark-400: #595959;
+  --color-dark-500: #4d4d4d;
+  --color-dark: #333;
+
+  --color-gray: #d3d3d3;
+
+  --color-orange-200: #ffe5d6;
+  --color-orange-500: #ff843b;
+  --color-orange: #ff5f00;
+
+  --color-teal-200: #e7fff9;
+  --color-teal-500: #23ffc8;
+  --color-teal: #00e7ad;
+
+  /* Taxonomy palette -- every name here must also appear in the
+     @source inline() list below, and must match a tag/category in content. */
+  --color-blog: #000;
+  --color-talks: #9000f0;
+  --color-ruby: #ff1440;
+  --color-ruby-700: #d80028;
+  --color-javascript: #e6b800;
+  --color-javascript-700: #bf9900;
+  --color-python: #147e55;
+  --color-python-700: #0f5c3e;
+  --color-random: #4441d1;
+  --color-random-700: #2d2aad;
+  --color-devops: #818187;
+  --color-devops-700: #646469;
+  --color-prolog: #2e65a3;
+  --color-prolog-700: #214875;
+  --color-php: #f500e4;
+  --color-php-700: #ba00ad;
+  --color-front-end: #d35836;
+  --color-front-end-700: #a94225;
+  --color-non-tech: #e68600;
+  --color-non-tech-700: #bf6f00;
+  --color-how-things-work: #2ebaf8;
+  --color-how-things-work-700: #07a0e4;
+  --color-programming-concepts: #37d552;
+  --color-programming-concepts-700: #24ad3c;
+
+  --background-image-particles: url('/images/particles-bg.jpg');
+
+  --shadow-featured: 4px 4px 10px black;
+
+  --border-width-10: 10px;
+  --border-width-20: 20px;
+}
+
+/* ---------------------------------------------------------------------------
+   Safelist. Templates build these class names by string interpolation, so
+   Tailwind's source scanner cannot see them. Replaces the old tailwind/safelist.js.
+   --------------------------------------------------------------------------- */
+
+/* home/portfolio-link.html, home/community-link.html */
+@source inline("{hover:,focus:,}bg-{teal,blue,orange}{,-200,-500}");
+@source inline("{group-hover:,group-focus:,}text-{teal,blue,orange}");
+@source inline("border-{teal,blue,orange}");
+
+/* entry/entry-card.html, entry/taxonomy-links.html */
+@source inline("{hover:,focus:,}{bg,text,border}-{blog,talks,ruby,javascript,python,random,devops,prolog,php,front-end,non-tech,how-things-work,programming-concepts}{,-700}");
+
+/* arrow-down.html */
+@source inline("border-t-{white,dark,gray}");
+
+/* js/ui/responsive-menu.ts toggles these at runtime */
+@source inline("-left-1/2");
+@source inline("translate-y-0");
+@source inline("translate-x-3");
+@source inline("{-,}rotate-45");
+@source inline("opacity-0");
+
+/* Emitted by Hugo's embedded pagination template and Chroma */
+@source inline("{pagination,page-item,highlight}");
+
+@layer site {
+  .container-main {
+    @apply container mx-auto px-4 max-w-7xl;
+  }
+
+  /* home/portfolio.html wants its row flush to the screen edge on mobile.
+     It cannot just add `px-0`, because a utility cannot outrank this layer. */
+  .container-main-flush {
+    @apply container mx-auto px-0 md:px-4 max-w-7xl;
+  }
+
+  .prose-main {
+    @apply
+      prose-h2:text-blue
+      prose-a:no-underline
+      prose-a:text-teal prose-a:hover:text-blue prose-a:focus:text-blue
+      prose-a:font-bold
+      prose-p:leading-loose
+      prose-hr:border-t-4 prose-hr:border-blue
+      prose-hr:w-24 prose-hr:mt-4 prose-hr:mb-6
+      prose-pre:my-0 prose-pre:text-base
+      prose-img:max-w-full lg:prose-img:max-w-[75%] xl:prose-img:max-w-[50%] prose-img:mx-auto;
+  }
+
+  /* The md: breakpoint is folded in here; it used to be a separate
+     `md:prose-home-md` class, which cannot work any more -- it would sit in
+     `utilities` and lose to `.prose-home` in this layer. */
+  .prose-home {
+    @apply
+      prose-h2:text-teal prose-h2:text-center md:prose-h2:text-left
+      prose-a:no-underline prose-a:hover:underline prose-a:focus:underline
+      prose-a:text-orange prose-a:hover:text-white prose-a:focus:text-white
+      prose-a:font-bold
+      prose-p:leading-loose
+      prose-p:text-white
+      prose-p:font-light;
+  }
+}
+
+@layer components {
+  .pagination {
+    @apply flex justify-center mt-12;
+  }
+
+  .page-item {
+    @apply mx-2;
+  }
+
+  .page-item a {
+    @apply text-2xl md:text-3xl md:mx-2 font-bold text-teal hover:text-blue focus:text-blue;
+  }
+
+  .page-item.active a {
+    @apply text-blue;
+  }
+
+  .highlight > div {
+    @apply overflow-x-scroll my-2 mx-0;
+  }
+}
+
+/* v4 generates responsive/state variants for @utility automatically,
+   which is what the removed `@variants responsive` block used to do. */
+@utility text-shadow {
+  text-shadow: 2px 2px 4px black;
+}
+
+@utility text-shadow-md {
+  text-shadow: 4px 4px 8px black;
+}
+
+@utility text-shadow-lg {
+  text-shadow: 15px 15px 30px black;
+}
+
+@utility text-shadow-none {
+  text-shadow: none;
+}

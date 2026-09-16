@@ -1,0 +1,16 @@
+{{- /* /llms.txt -- a Markdown index of the site for AI crawlers. */ -}}
+# {{ site.Title }}
+
+> {{ site.Params.description }}
+
+{{ with site.Home.Content }}{{ . | plainify | htmlUnescape | strings.TrimSpace }}
+
+{{ end -}}
+{{- range $section := slice "entry" "projects" }}
+{{- with site.GetPage $section }}
+## {{ .Title }}
+{{ range .RegularPagesRecursive.ByDate.Reverse }}
+- [{{ .Title }}]({{ .Permalink }}){{ with .Description }}: {{ . | plainify | htmlUnescape }}{{ end }}
+{{- end }}
+{{ end }}
+{{- end -}}

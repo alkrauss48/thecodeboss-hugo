@@ -5,7 +5,7 @@ date: "2016-02-24"
 draft: "true"
 menu: featured
 weight: 40
-images:
+gallery:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/websockets/thumbnail/websockets-th-1.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/websockets/full/websockets-1.jpg
     label: Demo - Desktop

@@ -5,7 +5,7 @@ date: "2022-02-24"
 draft: "false"
 menu: featured
 weight: 15
-images:
+gallery:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/cyrus-lyrics/thumbnail/cl-2-th.jpeg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/cyrus-lyrics/full/cl-1.jpeg
     label: App Icon

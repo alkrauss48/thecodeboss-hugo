@@ -3,7 +3,7 @@ title: Guernsey
 date: "2016-10-01"
 draft: "false"
 weight: 23
-images:
+gallery:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/guernsey/thumbnail/th-gsy-1.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/guernsey/full/big-gsy-1.jpg
     label: Homepage

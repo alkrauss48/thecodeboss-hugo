@@ -1,0 +1,40 @@
+<section class="relative bg-dark text-white py-16">
+  {{ partial "arrow-down.html" (dict "color" "white") }}
+  <div class="
+    [ container-main ]
+    [ flex flex-col md:flex-row justify-center items-center ]
+  ">
+    <img class="w-56 md:w-80 mb-8 md:mb-0" src="{{ site.Params.profile }}"
+         width="320" height="320" loading="lazy"
+         alt="Aaron Krauss">
+    <div class="md:ml-8">
+      <div class="prose prose-home">
+        {{.Content}}
+      </div>
+      <div class="mt-8 text-center md:text-left">
+        <a class="
+          [ inline-block px-5 py-2 ]
+          [ font-bold ]
+          [ border-2 border-orange ]
+          [ bg-orange text-white ]
+          [ hover:bg-white hover:text-orange focus:bg-white focus:text-orange ]
+          "
+          href="/about"
+        >More About Me</a>
+        <a class="
+          [ inline-block px-5 py-2 ml-4 ]
+          [ font-bold ]
+          [ border-2 border-dark-400 ]
+          [ bg-dark-500 text-white ]
+          [ hover:bg-white hover:text-dark-500 focus:bg-white focus:text-dark-500 ]
+          "
+          target="_blank"
+          href="/resume"
+        >
+          Resume
+          {{ partial "icons/external-arrow.html" (dict "class" "w-5 h-5 inline ml-1") }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

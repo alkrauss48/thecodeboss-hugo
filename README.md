@@ -1,88 +1,72 @@
 # [thecodeboss.dev](https://thecodeboss.dev) Hugo Site
 
-This is a rebuild of my personal portfolio site, using the
-[Hugo](https://gohugo.io/) static site generator, written in
-[Go](https://go.dev/).
+My personal portfolio site, built with the [Hugo](https://gohugo.io/) static
+site generator and served as static files by nginx.
 
-## Running in Docker**
+## Requirements
 
-** Don't do this if you want to dev on this project. If you want to develop on
-this project, follow the instructions in the next section.
+- [Hugo](https://gohugo.io/) **extended**, 0.166.0 or newer (`brew install hugo`)
+- Node (see `.nvmrc`)
 
-Docker will build in production mode, and will run as purely static
-files (which is what Hugo naturally outputs) served by Nginx. This means there
-will be **no** actively-running build automation and/or hot reloading, which would be
-a terrible experience for developing.
+## Setup
 
 ```sh
-docker compose up
-
-# Navigate to http://localhost:1313
+nvm use      # optional, if you use nvm
+npm ci
 ```
 
-## To Install for Development
+`npm ci` is required even though there is no JavaScript build step of its own:
+Hugo shells out to the Tailwind CSS CLI in `node_modules` to compile the
+stylesheet.
 
-First, you need Go installed. Next, install Hugo (example using
-[Homebrew](https://brew.sh/) for macOS):
+## Development
+
 ```sh
-brew install hugo
+npm run dev   # hugo server -- http://localhost:1313
 ```
 
-Lastly, install the theme's node modules:
+That is the entire dev loop. Hugo compiles the TypeScript (via esbuild) and the
+Tailwind CSS itself and hot-reloads both; there are no separate watchers.
+
+## Building
+
 ```sh
-cd themes/thecodeboss
-nvm use # (optional) only if you have NVM installed
-npm install
+npm run build   # hugo --minify --gc, output in public/
 ```
 
-## To Run
+In production, CSS and JS are minified, fingerprinted, and given
+subresource-integrity hashes. In development they are served plain.
 
-You will need to run 3 continuous processes:
+## Linting and testing
 
-* CSS build automation
-* JS build automation
-* The Hugo server
-
-Once they are all running, navigate to http://localhost:1313.
-
-### Build the CSS
 ```sh
-cd themes/thecodeboss
-npm run css-watch
+npm run lint        # all three of the below
+npm run lint:js     # eslint
+npm run lint:css    # stylelint
+npm run lint:types  # tsc --noEmit
+
+npm test            # vitest unit tests
+npm run test:e2e    # playwright; starts Hugo itself
 ```
 
-### Build the JS
+`npm run lint:types` matters: Hugo's `js.Build` uses esbuild, which strips
+TypeScript types without checking them. `tsc --noEmit` is the only thing that
+actually type-checks the source.
+
+## Docker
+
+Builds the production image (Hugo + Tailwind, output served by nginx):
+
 ```sh
-cd themes/thecodeboss
-npm run js-watch
+docker compose up --build
+# http://localhost:1313
 ```
 
-### Start the application server
-```sh
-hugo server --disableFastRender
+This produces the same static output the deployed site serves, with no hot
+reloading — use `npm run dev` for development.
 
-# Navigate to http://localhost:1313
-```
+## Content
 
-## Linting
-```sh
-cd themes/thecodeboss
-
-# JavaScript Linting
-npm run lint:js
-
-# Style Linting
-npm run lint:css
-```
-
-## Testing
-```sh
-cd themes/thecodeboss
-
-# Run Jest tests
-npm run test
-
-# Run Playwright tests
-# Note: Hugo server must be running on http://localhost:1313
-npx playwright test
-```
+Every page is a bundle at `content/<section>/<slug>/index.md`. See
+[CLAUDE.md](./CLAUDE.md) for the front matter fields, the `images` vs `gallery`
+distinction, and the two-step process for adding a new taxonomy tag.

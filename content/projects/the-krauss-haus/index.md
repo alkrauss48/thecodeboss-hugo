@@ -5,7 +5,7 @@ date: "2025-08-07"
 draft: "false"
 menu: featured
 weight: 18
-images:
+gallery:
   - thumb: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/the-krauss-haus/thumbnail/krauss-haus-icon-th.jpg
     full: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/projects/the-krauss-haus/full/krauss-haus-icon.jpg
     label: Site Icon

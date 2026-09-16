@@ -1,6 +1,6 @@
 ---
 title: Projects
-date: "2022–11–03"
+date: "2022-11-03"
 menu: main
 headerSrc: https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thecodeboss.dev/pages/projects/turner-falls.jpg
 headerAltText: Turner Falls in South Central Oklahoma

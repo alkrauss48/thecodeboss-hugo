@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<main class="bg-white py-12">
+  <div class="container-main">
+    <div class="prose prose-main max-w-none">
+      {{ .Content }}
+    </div>
+    {{ with .Pages }}
+      <ul class="mt-8">
+        {{ range . }}
+          <li class="my-4">
+            <a class="text-xl font-bold text-teal hover:text-blue focus:text-blue"
+               href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ with .Date }}
+              <time class="block text-dark-400" datetime="{{ .Format "2006-01-02" }}">
+                {{ . | time.Format site.Params.dateFormat }}
+              </time>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+</main>
+{{ end }}

@@ -1,0 +1,47 @@
+{{ $isTags := eq .current.Type "tags" }}
+{{ $tag := urlize .current.Title  }}
+{{ $category := ""  }}
+
+{{ if not $isTags }}
+  {{ with .entry.Params.tags }}
+    {{ $tag = urlize (index . 0) }}
+  {{ end }}
+{{ end }}
+
+{{ with .entry.Params.categories }}
+  {{ $category = urlize (index . 0) }}
+{{ end }}
+
+<a class="
+  [ relative group w-full h-40 md:h-60 p-4 ]
+  [ text-white text-center ]
+  [ bg-{{ $tag }} hover:bg-{{ $tag }}-700 focus:bg-{{ $tag }}-700 ]
+  [ flex flex-col justify-center ]
+  "
+  href="{{ .entry.Params.externalUrl | default .entry.RelPermalink }}"
+  {{ with .entry.Params.externalUrl }} target="_blank" {{end }}
+  >
+    <h2 class="
+      [ text-base md:text-lg ]
+      [ transition ease-in-out duration-300 ]
+      [ md:group-hover:-translate-y-8 md:group-focus:-translate-y-8 ]
+      ">
+      {{ .entry.Title }}
+      {{ with .entry.Params.externalUrl }}
+        {{ partial "icons/external-arrow.html" (dict "class" "w-5 h-5 inline ml-1") }}
+      {{ end }}
+    </h2>
+    <p class="
+      [ absolute bottom-10 left-0 ]
+      [ text-sm font-light w-full px-4 ]
+      [ transition ease-in-out duration-300 ]
+      [ md:group-hover:-translate-y-4 md:group-focus:-translate-y-4 ]
+      [ opacity-0 md:group-hover:opacity-100 md:group-focus:opacity-100 ]
+    ">
+      {{ .entry.Summary | plainify | truncate 65 }}
+    </p>
+    <p title="{{ $category | singularize | humanize }}" class="p-2 text-sm absolute bottom-0 right-0 bg-black/20 text-white">
+      {{ $iconPath := cond (eq $category "blog") "icons/blog.html" "icons/talks.html" }}
+      {{ partial $iconPath (dict "class" "w-5 h-5 inline") }}
+    </p>
+</a>

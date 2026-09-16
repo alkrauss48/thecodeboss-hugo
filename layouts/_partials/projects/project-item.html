@@ -1,0 +1,49 @@
+{{ $title := .Title }}
+
+<section>
+  <div class="container-main">
+    <h2 class="text-orange text-3xl font-bold">
+      {{ with .Param "externalUrl" }}
+        <a
+          href="{{ . }}"
+          target="_blank"
+          class="hover:text-blue focus:text-blue"
+        >
+      {{ end }}
+
+      {{ $title }}
+
+      {{ with .Param "externalUrl" }}
+        {{ partial "icons/external-arrow.html" (dict "class" "") }}
+        </a>
+      {{ end }}
+    </h2>
+
+    <div class="mt-8 prose prose-main">
+      {{ .Content }}
+    </div>
+
+  </div>
+  <div class="relative mt-8 pt-10 md:pt-20 pb-8 bg-gray">
+    {{ partial "arrow-down.html" (dict "color" "white") }}
+
+    <div class="
+      [ container-main ]
+      [ grid gap-8 grid-cols-2 md:grid-cols-4 auto-rows-max ]
+    ">
+
+      {{ range .Params.gallery }}
+        {{ partial "home/featured-link.html" (dict
+          "imageAlt" (printf "%s - %s" $title .label)
+          "imageSrc" .thumb
+          "url" .full
+          "urlLabel" .label
+          "imageActionText" "View"
+        ) }}
+      {{ end }}
+    </div>
+  </div>
+  <div class="relative mb-16">
+    {{ partial "arrow-down.html" (dict "color" "gray") }}
+  </div>
+</section>

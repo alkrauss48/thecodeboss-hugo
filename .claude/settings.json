@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo:*)",
+      "Bash(npm run:*)",
+      "Bash(npm ci)",
+      "Bash(npm install)",
+      "Bash(npm test:*)",
+      "Bash(npx playwright test:*)",
+      "Bash(npx vitest:*)",
+      "Bash(npx eslint:*)",
+      "Bash(npx stylelint:*)",
+      "Bash(npx tsc:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if git diff --name-only HEAD -- layouts assets hugo.toml | grep -q .; then cd \"$CLAUDE_PROJECT_DIR\" && hugo --renderToMemory --quiet --logLevel error 2>&1 | head -20; fi"
+          }
+        ]
+      }
+    ]
+  }
+}

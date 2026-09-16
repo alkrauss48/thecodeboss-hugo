@@ -1,0 +1,16 @@
+<footer class="mt-auto relative bg-dark py-3">
+  <div class="
+    [ container-main ]
+    [ flex flex-col md:flex-row justify-between items-center ]
+  ">
+    <section class="my-4 md:my-0">
+      <p class="text-white">&copy; {{ now.Year }} Aaron Krauss. All Rights Reserved.</p>
+    </section>
+    <nav class="mb-4 md:mb-0">
+      {{ partial "nav/social-list.html" (dict "itemClass" "mx-4 md:ml-8 md:mr-0" "linkWidth" "w-6") }}
+    </nav>
+  </div>
+  {{ partial "arrow-down.html" (dict "color" "white") }}
+</footer>
+
+{{ partial "js.html" (dict "src" "js/main.ts") }}
