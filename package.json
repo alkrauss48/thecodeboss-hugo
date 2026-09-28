@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/alkrauss48/thecodeboss-hugo#readme",
   "dependencies": {
-    "three": "^0.186.0"
+    "three": "^0.186.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
