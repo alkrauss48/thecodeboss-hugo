@@ -3,7 +3,7 @@
 # The official Hugo image ships Hugo extended *and* Node, which is what
 # css.TailwindCSS needs (it shells out to node_modules/.bin/tailwindcss).
 # Pinned to the same version used for local development.
-FROM ghcr.io/gohugoio/hugo:v0.166.0 AS builder
+FROM ghcr.io/gohugoio/hugo:v0.167.0 AS builder
 USER root
 WORKDIR /app
 
