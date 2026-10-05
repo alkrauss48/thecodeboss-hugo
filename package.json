@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/alkrauss48/thecodeboss-hugo#readme",
   "dependencies": {
-    "three": "^0.186.0"
+    "three": "^0.186.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -34,12 +34,12 @@
     "@tailwindcss/typography": "^0.5.20",
     "@types/node": "^22.20.3",
     "@types/three": "^0.186.0",
-    "eslint": "^10.10.0",
-    "stylelint": "^17.15.0",
+    "eslint": "^10.11.0",
+    "stylelint": "^17.16.0",
     "stylelint-config-standard": "^40.0.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.70.0",
-    "vitest": "^5.0.1"
+    "typescript-eslint": "^8.71.0",
+    "vitest": "^5.0.3"
   }
 }
