@@ -16,7 +16,7 @@ images:
 
 [See the slides!](https://simpleslides.dev/thecodeboss/building-rapid-web-applications-with-laravel-and-filament)
 
-This talk was originally given on September 4, 2026 at the [Commit Your Code](https://commityourcode.com/) conference in Plano, TX.
+This talk was originally given on September 4, 2026 at the [Commit Your Code](https://commityourcode.com/) conference in Plano, TX, and then again on October 21, 2026 at [ThunderPlains](https://2026.thunderplainsconf.com/) in Oklahoma City, OK.
 
 ## Abstract
 

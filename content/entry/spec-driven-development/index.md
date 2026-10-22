@@ -8,14 +8,14 @@ tags:
 draft: "false"
 description: Check out my talk "Spec-Driven Development," given on 2026-09-28.
 summary: Building Smarter with AI
-videoUrl: "https://player.vimeo.com/video/1228942879?h=38502d07fc&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479#t=4h17m14s&end=5h04m57s"
+videoUrl: "https://www.youtube.com/embed/0uBwH9PNd2w?si=bPiMMwDLL_XJJkJm"
 images:
 - https://personal-k8s-main-space.nyc3.digitaloceanspaces.com/simpleslides.dev/user-uploads/217/spec-driven-development-building-smarter-with-ai-thecodeboss.jpg
 ---
 
 [See the slides!](https://simpleslides.dev/thecodeboss/spec-driven-development-building-smarter-with-ai)
 
-This talk was originally given on September 28, 2026 at [DevOps Days Dallas 2026](https://devopsdays.org/events/2026-dallas/welcome/).
+This talk was originally given on September 28, 2026 at [DevOps Days Dallas 2026](https://devopsdays.org/events/2026-dallas/welcome/) in Dallas, TX, and then again on October 21, 2026 at [Innotech OK](https://www.innotechok.com/) in Oklahoma City, OK.
 
 ## Abstract
 
